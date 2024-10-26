@@ -7,10 +7,14 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    fontFamily: {
+      kaushan: ["Kaushan Script"],
+    },
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        blues: {
+          DEFAULT: "#172554",
+        },
       },
     },
   },
