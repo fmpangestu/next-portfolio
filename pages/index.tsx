@@ -8,7 +8,10 @@ import { services } from "../data";
 // { services }: { services: IService[] }
 export default function Home() {
   return (
-    <div className="flex flex-col flex-grow px-6 pt-1 ">
+    <div
+      className="flex flex-col flex-grow px-6 pt-1  overflow-y-scroll custom-scrollbar"
+      style={{ height: "65vh" }}
+    >
       <h5 className="font-medium">
         Hello, I'm Farhan Maulana Pangestu, a Front End Developer, and I'm
         Student Universitas Alma Ata. I'm developer web applications. I have

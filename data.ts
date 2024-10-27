@@ -1,5 +1,5 @@
 import { AiOutlineApi } from "react-icons/ai";
-import { IService, ISkill } from "./type";
+import { IProject, IService, ISkill } from "./type";
 import {
   FaCode,
   FaDatabase,
@@ -13,6 +13,15 @@ import {
 import dicoding from "@/public/images/experience/dicoding1.jpeg";
 import idcamp from "@/public/images/experience/idcamp.png";
 import kampus from "@/public/images/experience/kampusmerdeka.png";
+// import project1 from "@/public/images/projects/1.png";
+// import project2 from "@/public/images/projects/2.png";
+// import project3 from "@/public/images/projects/3.png";
+// import project4 from "@/public/images/projects/4.png";
+// import project5 from "@/public/images/projects/5.png";
+// import project6 from "@/public/images/projects/6.png";
+// import project7 from "@/public/images/projects/7.png";
+// import project8 from "@/public/images/projects/8.png";
+
 import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
 import { SiExpress, SiNotion, SiPostman, SiTypescript } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
@@ -136,5 +145,93 @@ export const tools: ISkill[] = [
     title: "Notion",
     level: "70%",
     Icon: SiNotion,
+  },
+];
+
+export const projects: IProject[] = [
+  {
+    title: "JoRan (Jokes Random)",
+    description: "Sebuah project menggunakan tools logika react js",
+    image_path: "/images/projects/1.png",
+    deployed_url: "https://jokes-random-v1.netlify.app/",
+    github_url: "https://github.com/fmpangestu/Jokes-random",
+    category: ["react"],
+    key_techs: ["ReactJS", "TailwindCSS"],
+  },
+  {
+    title: "Todo App",
+    description: "Sebuah project React dengan Logika Todo",
+    image_path: "/images/projects/2.png",
+    deployed_url: "https://todo-apps-v1.netlify.app/",
+    github_url: "https://github.com/fmpangestu/Todo-app",
+    category: ["react"],
+    key_techs: ["ReactJS", "TailwindCSS"],
+  },
+  {
+    title: "Note Apps",
+    description: "Sebuah project React dengan Logika Note",
+    image_path: "/images/projects/3.png",
+    deployed_url: "https://shooping-notesqu.netlify.app/",
+    github_url: "https://github.com/fmpangestu/shopping-note",
+    category: ["react"],
+    key_techs: ["ReactJS", "TailwindCSS"],
+  },
+  {
+    title: "Wisata_ID",
+    description:
+      "Sebuah project team dengan react,express.js, yang sangat kompleks",
+    image_path: "/images/projects/4.png",
+    deployed_url: "https://wisataid.vercel.app/",
+    github_url: "https://github.com/fmpangestu/wisataid",
+    category: ["react", "node", "express", "mysql"],
+    key_techs: ["ReactJS", "ExpressJS", "NodeJS", "MySQL"],
+  },
+  {
+    title: "Yok Ngopi",
+    description:
+      "Sebuah project yang menggunakan vanila language,html css javascript",
+    image_path: "/images/projects/5.png",
+    deployed_url: "https://yokngopicuy.netlify.app/",
+    github_url: "https://github.com/fmpangestu/restaurant_web",
+    category: ["html", "css", "javascript"],
+    key_techs: ["HTML", "CSS", "JavaScript"],
+  },
+  {
+    title: "Web Chat Clone",
+    description:
+      "Sebuah project yang di kembangkan dengan MERN Stack, yang bisa digunakan secara online",
+    image_path: "/images/projects/6.png",
+    github_url: "https://github.com/fmpangestu/chat-api-MERN",
+    category: ["react", "node", "express", "mongodb"],
+    key_techs: ["ReactJS", "ExpressJS", "NodeJS", "MongoDB"],
+  },
+  {
+    title: "Beasiswa Finder",
+    description:
+      "Sebuah project yang di kembangkan dengan laravel dan juga dengan MySQL. sebagai project team",
+    image_path: "/images/projects/7.png",
+    github_url: "https://github.com/fmpangestu/beasiswa-finder",
+    category: ["laravel", "mysql"],
+    key_techs: ["Laravel", "MySQL"],
+  },
+  {
+    title: "Sistem Informasi Desa Sitemu",
+    description:
+      "Sebuah project yang di kembangkan dengan UI/UX yang menarik, dan juga pengembangan react js, dan beberapa fitur yang di utamakan",
+    image_path: "/images/projects/8.png",
+    deployed_url: "https://sitemubersatu.com/",
+    github_url: "https://github.com/fmpangestu/desa-sitemu",
+    category: ["react", "node"],
+    key_techs: ["ReactJS", "NodeJS", "tailwindCSS"],
+  },
+  {
+    title: "My Portfolio",
+    description:
+      "Sebuah project portfolio pribadi yang di kembangkan dengan ReactJS dan TailwindCSS,",
+    image_path: "/images/projects/9.png",
+    deployed_url: "https://farhanmp.xyz",
+    github_url: "https://github.com/fmpangestu/portfolioqu",
+    category: ["react"],
+    key_techs: ["ReactJS", "TailwindCSS"],
   },
 ];

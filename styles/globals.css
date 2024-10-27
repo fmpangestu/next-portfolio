@@ -122,3 +122,21 @@ ul {
 .example-2 .icon-content a[data-social="youtube"] ~ .tooltip {
   background-color: #ff0000;
 }
+
+/* Gaya untuk scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px; /* Lebar scrollbar */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent; /* Warna latar belakang track scrollbar */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  @apply bg-sky-700; /* Warna thumb scrollbar */
+  border-radius: 10px; /* Radius untuk membuat thumb lebih bulat */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Warna thumb scrollbar saat di-hover */
+}

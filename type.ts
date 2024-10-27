@@ -18,10 +18,22 @@ export interface ISkill {
 export interface IProject {
   title: string;
   description: string;
-  image_path: StaticImageData | string;
+  image_path: string;
   deployed_url?: string;
   github_url: string;
   category: Category[];
   key_techs: string[];
 }
-export type Category = "react" | "node" | "laravel" | "nextJs";
+export type Category =
+  | "react"
+  | "node"
+  | "laravel"
+  | "nextJs"
+  | "express"
+  | "php"
+  | "mysql"
+  | "mongodb"
+  | "typescript"
+  | "html"
+  | "javascript"
+  | "css";
