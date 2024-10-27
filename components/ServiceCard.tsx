@@ -11,13 +11,13 @@ const ServiceCard: FunctionComponent<{ service: IService }> = ({
     };
   };
   return (
-    <div className="flex items-center p-2 space-x-4 text-black">
-      {Icon && <Icon className="w-20 h-20 text-sky-700" />}
+    <div className="flex items-center p-2 space-x-4 text-black dark:text-slate-200">
+      {Icon && <Icon className="w-20 h-20 text-sky-700 dark:text-sky-400" />}
       {image && (
         <Image
           src={image}
           alt=""
-          className="object-cover w-12 h-12 rounded-lg mix-blend-multiply"
+          className="object-cover w-12 h-12 rounded-lg "
           width={500}
           height={500}
         />

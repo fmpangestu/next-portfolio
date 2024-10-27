@@ -8,7 +8,10 @@ import { services } from "../data";
 // { services }: { services: IService[] }
 export default function Home() {
   return (
-    <div className="flex flex-col flex-grow px-6 pt-1 ">
+    <div
+      className="flex flex-col flex-grow px-6 pt-1  overflow-y-scroll custom-scrollbar"
+      style={{ height: "65vh" }}
+    >
       <h5 className="font-medium">
         Hello, I'm Farhan Maulana Pangestu, a Front End Developer, and I'm
         Student Universitas Alma Ata. I'm developer web applications. I have
@@ -17,7 +20,7 @@ export default function Home() {
         Developer.
       </h5>
       <div
-        className="flex-grow p-4 mt-2 bg-gray-200"
+        className="flex-grow p-4 mt-2 bg-gray-200 dark:bg-slate-950"
         style={{ marginLeft: "-1.5rem", marginRight: "-1.5rem" }}
       >
         <h6 className="my-3 text-xl font-bold tracking-wide">
@@ -25,7 +28,10 @@ export default function Home() {
         </h6>
         <div className="grid gap-6 md:grid-cols-2 ">
           {services.map((service) => (
-            <div key={service.title} className={`bg-slate-100 rounded-xl`}>
+            <div
+              key={service.title}
+              className={`bg-slate-100 dark:bg-slate-900 rounded-xl`}
+            >
               <ServiceCard service={service} />
             </div>
           ))}

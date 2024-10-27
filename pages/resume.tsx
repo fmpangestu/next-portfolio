@@ -5,7 +5,7 @@ import { languages, tools } from "@/data";
 export default function Resume() {
   return (
     <div className="flex flex-col flex-grow px-6 py-2 ">
-      <div className="grid gap-6 md:grid-cols-2 text-slate-800">
+      <div className="grid gap-6 md:grid-cols-2 text-slate-800 dark:text-slate-200">
         <div className="">
           <h1 className="font-semibold">Education</h1>
           <h3 className="font-semibold">Informatics Engineering</h3>

@@ -13,7 +13,7 @@ const NavItem: FunctionComponent<{
       <p>
         <span
           onClick={() => setActiveItem(name)}
-          className="font-semibold transition duration-300 hover:text-sky-700"
+          className="font-semibold transition duration-300 hover:text-sky-950 dark:hover:text-slate-200"
         >
           {name}
         </span>
@@ -29,10 +29,11 @@ const Navbar = () => {
     if (pathname === "/") setActiveItem("About");
     if (pathname === "/project") setActiveItem("Project");
     if (pathname === "/resume") setActiveItem("Resume");
+    if (pathname === "/sertifikat") setActiveItem("Sertifikat");
   }, [pathname]);
   return (
     <div className="flex items-center justify-between px-5 py-2 my-2">
-      <span className="text-xl font-bold border-b-2 text-sky-700 border-sky-700">
+      <span className="text-xl font-bold border-b-2 dark:text-slate-200 text-sky-950 border-sky-600">
         {activeItem}
       </span>
       <div className="flex space-x-3 text-lg text-slate-400">
@@ -53,6 +54,12 @@ const Navbar = () => {
           setActiveItem={setActiveItem}
           name="Resume"
           route="/resume"
+        />
+        <NavItem
+          activeItem={activeItem}
+          setActiveItem={setActiveItem}
+          name="Sertificate"
+          route="/sertificate"
         />
       </div>
     </div>
