@@ -17,7 +17,7 @@ export default function Home() {
         Developer.
       </h5>
       <div
-        className="flex-grow p-4 mt-2 bg-gray-200"
+        className="flex-grow p-4 mt-2 bg-gray-200 dark:bg-slate-950"
         style={{ marginLeft: "-1.5rem", marginRight: "-1.5rem" }}
       >
         <h6 className="my-3 text-xl font-bold tracking-wide">
@@ -25,7 +25,10 @@ export default function Home() {
         </h6>
         <div className="grid gap-6 md:grid-cols-2 ">
           {services.map((service) => (
-            <div key={service.title} className={`bg-slate-100 rounded-xl`}>
+            <div
+              key={service.title}
+              className={`bg-slate-100 dark:bg-slate-900 rounded-xl`}
+            >
               <ServiceCard service={service} />
             </div>
           ))}

@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 // import Link from "next/link";
 // import { FaLinkedin } from "react-icons/fa";
@@ -5,10 +6,21 @@ import Image from "next/image";
 import { IoIosSend } from "react-icons/io";
 import { MdOutlineLocationOn } from "react-icons/md";
 import { RiDownloadCloudFill } from "react-icons/ri";
-
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 const Sidebar = () => {
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+  const changeTheme = () => {
+    setTheme(theme === "light" ? "dark" : "light");
+  };
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
   return (
-    <div>
+    <div className="flex-grow">
       <Image
         src="/images/sidebarImg/2.jpg"
         alt="my-foto"
@@ -16,15 +28,17 @@ const Sidebar = () => {
         height={200}
         className="object-cover w-48 h-48 mx-auto rounded-full lg:object-scale-down lg:w-32 lg:h-32 "
       />
-      <h3 className="my-4 text-3xl font-medium tracking-wider font-kaushan text-sky-700">
-        <span className="text-blues">Farhan </span>
+      <h3 className="my-4 text-3xl font-medium tracking-wider font-kaushan text-sky-700 dark:text-sky-600">
+        <span className="text-blues dark:text-slate-200">Farhan </span>
         Mp
       </h3>
-      <p className="w-full py-2 my-3 bg-gray-200 rounded-lg">Web Developer</p>
+      <p className="w-full py-2 my-3 bg-gray-200 dark:bg-slate-950 rounded-lg">
+        Web Developer
+      </p>
       <a
         href=""
         download="name"
-        className="flex items-center justify-center w-full gap-1 py-2 my-3 transition duration-500 ease-in-out bg-gray-200 rounded-lg hover:bg-gradient-to-r from-blues to-sky-600 hover:text-white"
+        className="flex items-center dark:bg-slate-950 justify-center w-full gap-1 py-2 my-3 transition duration-500 ease-in-out bg-gray-200 rounded-lg hover:bg-gradient-to-r hover:from-blues hover:to-sky-600 hover:text-white"
       >
         <RiDownloadCloudFill />
         Download Resume
@@ -52,6 +66,7 @@ const Sidebar = () => {
             aria-label="LinkedIn"
             data-social="linkedin"
             target="blank"
+            className="bg-[#fff] dark:bg-slate-950"
           >
             <div className="filled"></div>
             <svg
@@ -59,7 +74,7 @@ const Sidebar = () => {
               width="16"
               height="16"
               fill="currentColor"
-              className="bi bi-linkedin"
+              className="bi bi-linkedin "
               viewBox="0 0 16 16"
               xmlSpace="preserve"
             >
@@ -77,6 +92,7 @@ const Sidebar = () => {
             aria-label="GitHub"
             data-social="github"
             target="blank"
+            className="bg-[#fff] dark:bg-slate-950"
           >
             <div className="filled"></div>
             <svg
@@ -102,6 +118,7 @@ const Sidebar = () => {
             aria-label="Instagram"
             data-social="instagram"
             target="blank"
+            className="bg-[#fff] dark:bg-slate-950"
           >
             <div className="filled"></div>
             <svg
@@ -125,7 +142,7 @@ const Sidebar = () => {
 
       {/* //? address */}
       <div
-        className="py-4 my-5 bg-gray-200 "
+        className="flex-grow py-4 my-5 bg-gray-200 dark:bg-slate-950 "
         style={{ marginLeft: "-1rem", marginRight: "-1rem" }}
       >
         <div className="flex items-center justify-center space-x-2">
@@ -137,13 +154,16 @@ const Sidebar = () => {
       <div className="flex flex-col items-center justify-center">
         <button
           onClick={() => window.open("mailto:farhanmaulana1710@gmail.com")}
-          className="flex items-center md:text-[1rem] justify-center w-8/12 gap-2 px-5 py-2 my-2 font-semibold transition duration-500 ease-in-out border rounded-full text-sky-700 focus:outline-none border-sky-700 hover:bg-gradient-to-r from-blues to-sky-600 hover:text-white hover:border-white"
+          className="flex items-center md:text-[1rem] justify-center w-8/12 gap-2 px-5 py-2 my-2 font-semibold transition duration-500 ease-in-out border rounded-full text-sky-700 focus:outline-none border-sky-700 hover:bg-gradient-to-r from-blues to-sky-600 hover:text-white hover:border-white dark:border-slate-200 dark:text-slate-200"
         >
           <IoIosSend />
           Email Me
         </button>
-        <button className="w-8/12 px-5 py-2 my-2 font-semibold text-white rounded-full focus:outline-none bg-gradient-to-r from-blues to-sky-600">
-          Dark Mode
+        <button
+          onClick={changeTheme}
+          className="w-8/12 px-5 py-2 my-2 font-semibold text-white text-transform: capitalize rounded-full focus:outline-none bg-gradient-to-r from-blues to-sky-600"
+        >
+          {theme === "light" ? "dark" : "light"} Mode
         </button>
       </div>
     </div>
