@@ -156,6 +156,7 @@ export const tools: ISkill[] = [
 
 export const projects: IProject[] = [
   {
+    id: 1,
     title: "JoRan (Jokes Random)",
     description: "Sebuah project menggunakan tools logika react js",
     image_path: "/images/projects/1.png",
@@ -165,6 +166,7 @@ export const projects: IProject[] = [
     key_techs: ["ReactJS", "TailwindCSS"],
   },
   {
+    id: 2,
     title: "Todo App",
     description: "Sebuah project React dengan Logika Todo",
     image_path: "/images/projects/2.png",
@@ -174,6 +176,7 @@ export const projects: IProject[] = [
     key_techs: ["ReactJS", "TailwindCSS"],
   },
   {
+    id: 3,
     title: "Note Apps",
     description: "Sebuah project React dengan Logika Note",
     image_path: "/images/projects/3.png",
@@ -183,6 +186,7 @@ export const projects: IProject[] = [
     key_techs: ["ReactJS", "TailwindCSS"],
   },
   {
+    id: 4,
     title: "Wisata_ID",
     description:
       "Sebuah project team dengan react,express.js, yang sangat kompleks",
@@ -193,6 +197,7 @@ export const projects: IProject[] = [
     key_techs: ["ReactJS", "ExpressJS", "NodeJS", "MySQL"],
   },
   {
+    id: 5,
     title: "Yok Ngopi",
     description:
       "Sebuah project yang menggunakan vanila language,html css javascript",
@@ -203,6 +208,7 @@ export const projects: IProject[] = [
     key_techs: ["HTML", "CSS", "JavaScript"],
   },
   {
+    id: 6,
     title: "Web Chat Clone",
     description:
       "Sebuah project yang di kembangkan dengan MERN Stack, yang bisa digunakan secara online",
@@ -212,6 +218,7 @@ export const projects: IProject[] = [
     key_techs: ["ReactJS", "ExpressJS", "NodeJS", "MongoDB"],
   },
   {
+    id: 7,
     title: "Beasiswa Finder",
     description:
       "Sebuah project yang di kembangkan dengan laravel dan juga dengan MySQL. sebagai project team",
@@ -221,6 +228,7 @@ export const projects: IProject[] = [
     key_techs: ["Laravel", "MySQL"],
   },
   {
+    id: 8,
     title: "Sistem Informasi Desa Sitemu",
     description:
       "Sebuah project yang di kembangkan dengan UI/UX yang menarik, dan juga pengembangan react js, dan beberapa fitur yang di utamakan",
@@ -231,6 +239,7 @@ export const projects: IProject[] = [
     key_techs: ["ReactJS", "NodeJS", "tailwindCSS"],
   },
   {
+    id: 9,
     title: "My Portfolio",
     description:
       "Sebuah project portfolio pribadi yang di kembangkan dengan ReactJS dan TailwindCSS,",
@@ -241,6 +250,7 @@ export const projects: IProject[] = [
     key_techs: ["ReactJS", "TailwindCSS"],
   },
   {
+    id: 10,
     title: "Tabungan Sederhana",
     description: "Sebuah project yang di kembangkan dengan typescript logika",
     image_path: "/images/projects/10.png",
@@ -249,6 +259,7 @@ export const projects: IProject[] = [
     key_techs: ["TypeScript", "CSS", "HTML"],
   },
   {
+    id: 11,
     title: "Logika login credentials dan google dengan NextJs",
     description:
       "Sebuah project yang di kembangkan dengan NextJs dan juga NextAuth",
@@ -262,30 +273,35 @@ export const projects: IProject[] = [
 
 export const sertificats: ISertificate[] = [
   {
+    id: 1,
     title: "Front End Web Development Expert",
     description: "Sertifikat kelulusan dari Dicoding Indonesia",
     image_path: "/images/sertificate/1.png",
     sertificate_url: "https://www.dicoding.com/certificates/4EXG4MYEQPRL",
   },
   {
+    id: 2,
     title: "Prinsip Dasar Pemrograman SOLID",
     description: "Sertifikat kelulusan dari Dicoding Indonesia",
     image_path: "/images/sertificate/6.png",
     sertificate_url: "https://www.dicoding.com/certificates/QLZ9R9VGMP5D",
   },
   {
+    id: 3,
     title: "Fundamental Front End Web",
     description: "Sertifikat kelulusan dari Dicoding Indonesia",
     image_path: "/images/sertificate/3.png",
     sertificate_url: "https://www.dicoding.com/certificates/JLX1W2VKJP72",
   },
   {
+    id: 4,
     title: "JavaScript Dasar",
     description: "Sertifikat kelulusan dari Dicoding Indonesia",
     image_path: "/images/sertificate/4.png",
     sertificate_url: "https://www.dicoding.com/certificates/N9ZO5VYGDPG5",
   },
   {
+    id: 5,
     title: "Application Back End Pemula",
     description: "Sertifikate kelulusan dari Dicoding Indonesia",
     image_path: "/images/sertificate/7.png",

@@ -8,7 +8,7 @@ import { fadeUp, routeAnimate, stagger } from "@/animate";
 // import Image from "next/image";
 // import { IService } from "../type";
 // { services }: { services: IService[] }
-export default function Home() {
+export default function HomePage() {
   return (
     <motion.div
       variants={routeAnimate}

@@ -16,6 +16,7 @@ export interface ISkill {
 }
 
 export interface IProject {
+  id: number;
   title: string;
   description: string;
   image_path: string;
@@ -25,6 +26,7 @@ export interface IProject {
   key_techs: string[];
 }
 export interface ISertificate {
+  id: number;
   title: string;
   description: string;
   image_path: string;
