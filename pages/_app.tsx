@@ -5,7 +5,8 @@ import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import { ThemeProvider } from "next-themes";
 import Head from "next/head";
-export default function App({ Component, pageProps }: AppProps) {
+import { AnimatePresence } from "framer-motion";
+export default function App({ Component, pageProps, router }: AppProps) {
   return (
     <ThemeProvider attribute="class">
       <div className="grid grid-cols-12 gap-6 px-5 2xl:px-48 my-14 sm:px-20 lg:px-8 ">
@@ -16,8 +17,10 @@ export default function App({ Component, pageProps }: AppProps) {
           <Head>
             <title>I'm Farhan</title>
           </Head>
-          <Navbar />
-          <Component {...pageProps} />
+          <AnimatePresence mode="wait" key={router.route}>
+            <Navbar />
+            <Component {...pageProps} />
+          </AnimatePresence>
         </div>
       </div>
     </ThemeProvider>

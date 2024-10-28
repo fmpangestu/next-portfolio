@@ -26,7 +26,9 @@ const Sidebar = () => {
         alt="my-foto"
         width={200}
         height={200}
-        className="object-cover w-48 h-48 mx-auto rounded-full lg:object-scale-down lg:w-32 lg:h-32 "
+        quality={100}
+        // layout="intrinsic"
+        className="object-cover w-48 h-48 mx-auto rounded-full  lg:w-32 lg:h-32 "
       />
       <h3 className="my-4 text-3xl font-medium tracking-wider font-kaushan text-sky-700 dark:text-sky-600">
         <span className="text-blues dark:text-slate-200">Farhan </span>

@@ -29,14 +29,14 @@ const Navbar = () => {
     if (pathname === "/") setActiveItem("About");
     if (pathname === "/project") setActiveItem("Project");
     if (pathname === "/resume") setActiveItem("Resume");
-    if (pathname === "/sertifikat") setActiveItem("Sertifikat");
+    if (pathname === "/sertificate") setActiveItem("Sertificate");
   }, [pathname]);
   return (
     <div className="flex items-center justify-between px-5 py-2 my-2">
       <span className="text-xl font-bold border-b-2 dark:text-slate-200 text-sky-950 border-sky-600">
         {activeItem}
       </span>
-      <div className="flex space-x-3 text-lg text-slate-400">
+      <div className="flex space-x-3 text-[1rem] text-slate-400">
         <NavItem
           activeItem={activeItem}
           setActiveItem={setActiveItem}

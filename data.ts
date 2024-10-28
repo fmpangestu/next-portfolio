@@ -27,6 +27,7 @@ import { SiExpress, SiNotion, SiPostman, SiTypescript } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
 import { FaSquareGithub } from "react-icons/fa6";
 import { CgFigma } from "react-icons/cg";
+import { FiFramer } from "react-icons/fi";
 
 export const services: IService[] = [
   {
@@ -145,6 +146,11 @@ export const tools: ISkill[] = [
     title: "Notion",
     level: "70%",
     Icon: SiNotion,
+  },
+  {
+    title: "Framer Motion",
+    level: "75%",
+    Icon: FiFramer,
   },
 ];
 
