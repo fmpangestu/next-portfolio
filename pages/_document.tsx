@@ -17,7 +17,6 @@ export default function Document() {
           content="I'm Farhan, a Fullstack Developer, and a Freelancer."
         />
         <link rel="icon" href="/boy.png" />
-        <title>I'm Farhan</title>
       </Head>
       <body className="antialiased bg-gradient-to-r from-blues to-slate-100 dark:from-slate-950 dark:to-slate-800">
         <Main />

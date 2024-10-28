@@ -23,7 +23,7 @@ body {
   background-color: black;
   font-family: sans-serif;
   /* overflow-y: hidden; */
-  @apply 2xl:overflow-hidden;
+  @apply lg:overflow-hidden;
 }
 
 /* From Uiverse.io by wilsondesouza */
@@ -125,7 +125,8 @@ ul {
 
 /* Gaya untuk scrollbar */
 .custom-scrollbar::-webkit-scrollbar {
-  width: 5px; /* Lebar scrollbar */
+  width: 0.3rem; /* Lebar scrollbar */
+  height: 0.3rem;
 }
 
 .custom-scrollbar::-webkit-scrollbar-track {

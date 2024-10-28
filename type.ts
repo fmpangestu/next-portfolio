@@ -24,6 +24,12 @@ export interface IProject {
   category: Category[];
   key_techs: string[];
 }
+export interface ISertificate {
+  title: string;
+  description: string;
+  image_path: string;
+  sertificate_url?: string;
+}
 export type Category =
   | "react"
   | "node"

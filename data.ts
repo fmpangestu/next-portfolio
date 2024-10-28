@@ -1,5 +1,5 @@
 import { AiOutlineApi } from "react-icons/ai";
-import { IProject, IService, ISkill } from "./type";
+import { IProject, ISertificate, IService, ISkill } from "./type";
 import {
   FaCode,
   FaDatabase,
@@ -27,6 +27,7 @@ import { SiExpress, SiNotion, SiPostman, SiTypescript } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
 import { FaSquareGithub } from "react-icons/fa6";
 import { CgFigma } from "react-icons/cg";
+import { FiFramer } from "react-icons/fi";
 
 export const services: IService[] = [
   {
@@ -146,6 +147,11 @@ export const tools: ISkill[] = [
     level: "70%",
     Icon: SiNotion,
   },
+  {
+    title: "Framer Motion",
+    level: "75%",
+    Icon: FiFramer,
+  },
 ];
 
 export const projects: IProject[] = [
@@ -233,5 +239,56 @@ export const projects: IProject[] = [
     github_url: "https://github.com/fmpangestu/portfolioqu",
     category: ["react"],
     key_techs: ["ReactJS", "TailwindCSS"],
+  },
+  {
+    title: "Tabungan Sederhana",
+    description: "Sebuah project yang di kembangkan dengan typescript logika",
+    image_path: "/images/projects/10.png",
+    github_url: "https://github.com/fmpangestu/learn-ts",
+    category: ["typescript", "html", "css"],
+    key_techs: ["TypeScript", "CSS", "HTML"],
+  },
+  {
+    title: "Logika login credentials dan google dengan NextJs",
+    description:
+      "Sebuah project yang di kembangkan dengan NextJs dan juga NextAuth",
+    image_path: "/images/projects/11.png",
+    deployed_url: "https://my-app-next-fmp.vercel.app/",
+    github_url: "https://github.com/fmpangestu/next-ts",
+    category: ["nextJs", "typescript"],
+    key_techs: ["NextJS", "TypeScript", "TailwindCss", "Firebase"],
+  },
+];
+
+export const sertificats: ISertificate[] = [
+  {
+    title: "Front End Web Development Expert",
+    description: "Sertifikat kelulusan dari Dicoding Indonesia",
+    image_path: "/images/sertificate/1.png",
+    sertificate_url: "https://www.dicoding.com/certificates/4EXG4MYEQPRL",
+  },
+  {
+    title: "Prinsip Dasar Pemrograman SOLID",
+    description: "Sertifikat kelulusan dari Dicoding Indonesia",
+    image_path: "/images/sertificate/6.png",
+    sertificate_url: "https://www.dicoding.com/certificates/QLZ9R9VGMP5D",
+  },
+  {
+    title: "Fundamental Front End Web",
+    description: "Sertifikat kelulusan dari Dicoding Indonesia",
+    image_path: "/images/sertificate/3.png",
+    sertificate_url: "https://www.dicoding.com/certificates/JLX1W2VKJP72",
+  },
+  {
+    title: "JavaScript Dasar",
+    description: "Sertifikat kelulusan dari Dicoding Indonesia",
+    image_path: "/images/sertificate/4.png",
+    sertificate_url: "https://www.dicoding.com/certificates/N9ZO5VYGDPG5",
+  },
+  {
+    title: "Application Back End Pemula",
+    description: "Sertifikate kelulusan dari Dicoding Indonesia",
+    image_path: "/images/sertificate/7.png",
+    sertificate_url: "https://www.dicoding.com/certificates/MRZM85L0KZYQ",
   },
 ];
