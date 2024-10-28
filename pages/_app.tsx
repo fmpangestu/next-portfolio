@@ -1,8 +1,10 @@
+/* eslint-disable react/no-unescaped-entities */
 import Navbar from "@/components/Navbar";
 import Sidebar from "@/components/Sidebar";
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import { ThemeProvider } from "next-themes";
+import Head from "next/head";
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider attribute="class">
@@ -11,6 +13,9 @@ export default function App({ Component, pageProps }: AppProps) {
           <Sidebar />
         </div>
         <div className="flex flex-col col-span-12 overflow-hidden bg-white dark:bg-gradient-to-tl dark:from-slate-950 dark:to-slate-800 lg:col-span-9 rounded-2xl shadow-custom-light dark:shadow-custom-dark">
+          <Head>
+            <title>I'm Farhan</title>
+          </Head>
           <Navbar />
           <Component {...pageProps} />
         </div>

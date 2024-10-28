@@ -19,6 +19,7 @@ const ProjectCard: FunctionComponent<{ project: IProject }> = ({
 }) => {
   const [mounted, setMounted] = useState(false);
   const [showDetail, setShowDetail] = useState(false);
+
   useEffect(() => {
     setMounted(true);
   }, []);
@@ -36,7 +37,7 @@ const ProjectCard: FunctionComponent<{ project: IProject }> = ({
       />
       <p className="text-center ">{title}</p>
       {showDetail && (
-        <div className="grid md:grid-cols-2 p-2 absolute top-0 left-0 z-0 w-full h-auto gap-x-12 text-slate-900 dark:text-white  bg-white dark:bg-gradient-to-r dark:from-slate-950 dark:to-slate-800 rounded-xl ">
+        <div className="grid md:grid-cols-2 gap-y-2 p-2 absolute top-0 left-0 z-0 w-full h-auto gap-x-12 text-slate-900 dark:text-white  bg-white dark:bg-gradient-to-r dark:from-slate-950 dark:to-slate-800 rounded-xl ">
           <div className="">
             <Image
               src={image_path}
@@ -78,7 +79,7 @@ const ProjectCard: FunctionComponent<{ project: IProject }> = ({
           <div className=" flex flex-col gap-3">
             <h2 className="font-semibold text-xl">{title}</h2>
             <h5 className="text-sm">{description}</h5>
-            <div className="flex gap-3">
+            <div className="flex  flex-wrap gap-3">
               {key_techs.map((tech) => (
                 <span
                   key={tech}

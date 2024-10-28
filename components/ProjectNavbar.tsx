@@ -21,7 +21,7 @@ export const ProjectNavbar: FunctionComponent<{
   active: string;
 }> = (props) => {
   return (
-    <div className="flex space-x-3 px-3 py-2 list-none overflow-x-auto">
+    <div className="flex space-x-3 px-3 py-2 list-none overflow-x-auto custom-scrollbar">
       <NavItem value="all" {...props} />
       <NavItem value="react" {...props} />
       <NavItem value="laravel" {...props} />
