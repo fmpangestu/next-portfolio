@@ -3,7 +3,7 @@ import Bar from "@/components/Bar";
 import { languages, tools } from "@/data";
 import { motion } from "framer-motion";
 /* eslint-disable react/no-unescaped-entities */
-export default function Resume() {
+export default function ResumePage() {
   const varianst = fadeUp;
   return (
     <motion.div

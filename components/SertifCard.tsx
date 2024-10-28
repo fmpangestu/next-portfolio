@@ -7,11 +7,17 @@ import { LuLink } from "react-icons/lu";
 import { motion } from "framer-motion";
 import { fadeUp, stagger } from "@/animate";
 
-const SertifCard: FunctionComponent<{ sertif: ISertificate }> = ({
-  sertif: { title, description, image_path, sertificate_url },
+const SertifCard: FunctionComponent<{
+  sertif: ISertificate;
+  showDetail: null | number;
+  setShowDetail: (id: null | number) => void;
+}> = ({
+  sertif: { title, description, image_path, sertificate_url, id },
+  showDetail,
+  setShowDetail,
 }) => {
   const [mounted, setMounted] = useState(false);
-  const [showDetail, setShowDetail] = useState(false);
+
   useEffect(() => {
     setMounted(true);
   }, []);
@@ -26,14 +32,14 @@ const SertifCard: FunctionComponent<{ sertif: ISertificate }> = ({
         height={500}
         layout="responsive"
         className="cursor-pointer rounded-lg"
-        onClick={() => setShowDetail(true)}
+        onClick={() => setShowDetail(id)}
       />
-      {showDetail && (
+      {showDetail === id && (
         <motion.div
           variants={stagger}
           initial="initial"
           animate="animate"
-          className="grid md:grid-cols-2 p-2 absolute top-0 left-0 z-0 w-full h-auto gap-x-5 text-slate-900 dark:text-white  bg-white dark:bg-gradient-to-r dark:from-slate-950 dark:to-slate-800 rounded-xl "
+          className="grid md:grid-cols-2 p-2 md:p-10 absolute top-0 left-0 z-0 w-full h-auto gap-x-5 text-slate-900 dark:text-white  bg-white dark:bg-gradient-to-r dark:from-slate-950 dark:to-slate-800 rounded-xl "
         >
           <motion.div variants={fadeUp} className="">
             <Image
@@ -65,7 +71,7 @@ const SertifCard: FunctionComponent<{ sertif: ISertificate }> = ({
           </div>
           <button
             className="absolute right-4 top-3 focus:outline-none rounded-full p-1 bg-slate-900 dark:bg-slate-100 text-slate-100 dark:text-slate-900"
-            onClick={() => setShowDetail(false)}
+            onClick={() => setShowDetail(null)}
           >
             <AiOutlineClose size={30} />
           </button>

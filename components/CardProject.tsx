@@ -8,7 +8,11 @@ import { FaSquareGithub } from "react-icons/fa6";
 import { LuLink } from "react-icons/lu";
 import { motion } from "framer-motion";
 import { fadeUp, stagger } from "@/animate";
-const ProjectCard: FunctionComponent<{ project: IProject }> = ({
+const ProjectCard: FunctionComponent<{
+  project: IProject;
+  showDetail: null | number;
+  setShowDetail: (id: null | number) => void;
+}> = ({
   project: {
     title,
     description,
@@ -17,10 +21,12 @@ const ProjectCard: FunctionComponent<{ project: IProject }> = ({
     github_url,
     category,
     key_techs,
+    id,
   },
+  showDetail,
+  setShowDetail,
 }) => {
   const [mounted, setMounted] = useState(false);
-  const [showDetail, setShowDetail] = useState(false);
 
   useEffect(() => {
     setMounted(true);
@@ -36,15 +42,15 @@ const ProjectCard: FunctionComponent<{ project: IProject }> = ({
         height={500}
         layout="responsive"
         className="cursor-pointer rounded-t-lg"
-        onClick={() => setShowDetail(true)}
+        onClick={() => setShowDetail(id)}
       />
       <p className="text-center ">{title}</p>
-      {showDetail && (
+      {showDetail === id && (
         <motion.div
           variants={stagger}
           initial="initial"
           animate="animate"
-          className="grid md:grid-cols-2 gap-y-2 p-2 absolute top-0 left-0 z-0 w-full h-auto gap-x-12 text-slate-900 dark:text-white  bg-white dark:bg-gradient-to-r dark:from-slate-950 dark:to-slate-800 rounded-xl "
+          className="grid md:grid-cols-2 gap-y-2 p-2 md:p-10 absolute top-0 left-0 z-0 w-full h-auto gap-x-12 text-slate-900 dark:text-white  bg-white dark:bg-gradient-to-r dark:from-slate-950 dark:to-slate-800 rounded-xl "
         >
           <motion.div variants={fadeUp} className="">
             <Image
@@ -108,7 +114,7 @@ const ProjectCard: FunctionComponent<{ project: IProject }> = ({
           </div>
           <button
             className="absolute right-4 top-3 focus:outline-none rounded-full p-1 bg-slate-900 dark:bg-slate-100 text-slate-100 dark:text-slate-900"
-            onClick={() => setShowDetail(false)}
+            onClick={() => setShowDetail(null)}
           >
             <AiOutlineClose size={30} />
           </button>

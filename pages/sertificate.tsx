@@ -2,8 +2,10 @@ import { fadeUp, routeAnimate, stagger } from "@/animate";
 import SertifCard from "@/components/SertifCard";
 import { sertificats } from "@/data";
 import { motion } from "framer-motion";
+import { useState } from "react";
 
-const sertificate = () => {
+const SertificatePage = () => {
+  const [showDetail, setShowDetail] = useState<number | null>(null);
   return (
     <motion.div
       variants={routeAnimate}
@@ -26,11 +28,15 @@ const sertificate = () => {
             className="col-span-12 sm:col-span-6 lg:col-span-4 bg-gray-300 rounded-lg dark:bg-slate-950"
             key={sertif.title}
           >
-            <SertifCard sertif={sertif} />
+            <SertifCard
+              sertif={sertif}
+              showDetail={showDetail}
+              setShowDetail={setShowDetail}
+            />
           </motion.div>
         ))}
       </motion.div>
     </motion.div>
   );
 };
-export default sertificate;
+export default SertificatePage;

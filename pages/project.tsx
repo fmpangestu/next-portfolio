@@ -5,9 +5,10 @@ import { Category } from "@/type";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { fadeUp, routeAnimate, stagger } from "@/animate";
-export default function Project() {
+export default function ProjectPage() {
   const [projects, setProjects] = useState(projectsData);
   const [active, setActive] = useState("all");
+  const [showDetail, setShowDetail] = useState<number | null>(null);
 
   const handlerFilterCategory = (category: Category | "all") => {
     if (category === "all") {
@@ -47,7 +48,11 @@ export default function Project() {
             key={project.title}
             className="col-span-12 sm:col-span-6 lg:col-span-4 bg-gray-300 rounded-lg dark:bg-slate-950"
           >
-            <ProjectCard project={project} />
+            <ProjectCard
+              project={project}
+              showDetail={showDetail}
+              setShowDetail={setShowDetail}
+            />
           </motion.div>
         ))}
       </motion.div>

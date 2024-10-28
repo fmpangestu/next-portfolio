@@ -8,9 +8,13 @@ import { MdOutlineLocationOn } from "react-icons/md";
 import { RiDownloadCloudFill } from "react-icons/ri";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
+import { AiOutlineClose } from "react-icons/ai";
+import { motion } from "framer-motion";
+import { fadeUp, stagger } from "@/animate";
 const Sidebar = () => {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
+  const [showDetail, setShowDetail] = useState(false);
   const changeTheme = () => {
     setTheme(theme === "light" ? "dark" : "light");
   };
@@ -20,7 +24,7 @@ const Sidebar = () => {
 
   if (!mounted) return null;
   return (
-    <div className="flex-grow">
+    <div className="flex-grow relative">
       <Image
         src="/images/sidebarImg/2.jpg"
         alt="my-foto"
@@ -37,15 +41,47 @@ const Sidebar = () => {
       <p className="w-full py-2 my-3 bg-gray-200 dark:bg-slate-950 rounded-lg">
         Web Developer
       </p>
-      <a
-        href=""
-        download="name"
+      <button
+        onClick={() => setShowDetail(true)}
         className="flex items-center dark:bg-slate-950 justify-center w-full gap-1 py-2 my-3 transition duration-500 ease-in-out bg-gray-200 rounded-lg hover:bg-gradient-to-r hover:from-blues hover:to-sky-600 hover:text-white"
       >
         <RiDownloadCloudFill />
         Download Resume
-      </a>
-
+      </button>
+      {showDetail && (
+        <motion.div
+          variants={stagger}
+          initial="initial"
+          animate="animate"
+          className="grid gap-y-2 p-2 items-center justify-center absolute top-1/2 lg:top-1/3 z-10 left-0 w-full h-auto text-slate-900 dark:text-white  bg-white dark:bg-gradient-to-r dark:from-slate-950 dark:to-slate-800 rounded-xl "
+        >
+          <motion.p variants={fadeUp}>Download Resume</motion.p>
+          <div className="flex gap-2">
+            <motion.a
+              variants={fadeUp}
+              className="dark:bg-slate-950 bg-gray-300 px-3 py-1 rounded-lg cursor-pointer text-[0.8rem]"
+              href="/resume_en.pdf"
+              download="resume_en.pdf"
+            >
+              Bahasa Inggris
+            </motion.a>
+            <motion.a
+              variants={fadeUp}
+              className="dark:bg-slate-950 bg-gray-300 px-3 py-1 rounded-lg cursor-pointer text-[0.8rem]"
+              href="/resume_id.pdf"
+              download="resume_id.pdf"
+            >
+              Bahasa Indonesia
+            </motion.a>
+          </div>
+          <button
+            className="absolute right-2 top-2 focus:outline-none rounded-full p-1 bg-slate-900 dark:bg-slate-100 text-slate-100 dark:text-slate-900"
+            onClick={() => setShowDetail(false)}
+          >
+            <AiOutlineClose size={15} />
+          </button>
+        </motion.div>
+      )}
       {/* //? Social Media */}
       {/* <div className="flex justify-around w-9/12 mx-auto my-5 md:w-full text-sky-950">
         <Link
