@@ -24,7 +24,7 @@ export default function ResumePage() {
           <h1 className="font-semibold">Education</h1>
           <h3 className="font-semibold">Informatics Engineering</h3>
           <h4 className="font-semibold">
-            Universitas Alma ata (2021 - Sekarang)
+            Universitas Alma ata (2021 - Present)
           </h4>
           <p className="text-[.8rem]">
             Informatics Engineering study program at Alma Ata University who has
@@ -41,7 +41,7 @@ export default function ResumePage() {
           <h1 className="font-semibold">Experience</h1>
           <h3 className="font-semibold">Internship</h3>
           <h4 className="text-[.8rem] font-semibold">
-            PT. TECH ACADEMYINTERNATIONAL (2021 - Sekarang)
+            PT. TECH ACADEMY INTERNATIONAL (2024 - Present)
           </h4>
           <p>I interned as a Front End Engineering Website Developer </p>
         </motion.div>

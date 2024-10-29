@@ -33,37 +33,37 @@ export const services: IService[] = [
   {
     title: "Frontend Development",
     description:
-      "Saya dapat Membuat Website pada user interface dan client user yang menarik dengan menggunakan <b>ReactJS</b>, <b>NextJS</b>, dan <b>TailwindCSS</b>.",
+      "I can create attractive user interface and client user websites using <b>ReactJS</b>, <b>NextJS</b>, and <b>TailwindCSS</b>.",
     Icon: FaCode,
   },
   {
     title: "BackEnd Development",
     description:
-      "Saya dapat Membuat Website pada server side dan database yang efisien dengan menggunakan <b>NodeJS</b>, <b>ExpressJS</b>, <b>Laravel</b>, dan <b>TypeScript</b>. yang dapat diintegrasikan dengan Frontend Development.",
+      "I can create efficient server side and database driven websites using  <b>NodeJS</b>, <b>ExpressJS</b>, <b>Laravel</b>, and <b>TypeScript</b>. which can be integrated with Front Development.",
     Icon: FaDatabase,
   },
   {
     title: "Resful API",
     description:
-      "Saya dapat membuat Restful API dengan menggunakan <b>NodeJS</b>, <b>ExpressJS</b>, <b>NextJs</b>, dan <b>MongoDB</b>, <b>Firebase</b>.",
+      "I can create Restful API using <b>NodeJS</b>, <b>ExpressJS</b>, <b>NextJs</b>, and <b>MongoDB</b>, <b>Firebase</b>.",
     Icon: AiOutlineApi,
   },
   {
     title: "Dicoding Indonesia",
     description:
-      "Adalah salah satu platform MSIB KAMPUS MERDEKA BATCH 5,mengikuti program (MBKM) pada waktu itu, selama 6 bulan(1 semester), banyak sekali pengalaman yang saya dapatkan.",
+      "Is one of the MSIB KAMPUS MERDEKA BATCH 5 platforms, following the program (MBKM) at that time, for 6 months (1 semester), I got a lot of experience.",
     image: dicoding,
   },
   {
     title: "IDCamp Indosat",
     description:
-      "Adalah salah satu platform yang saya ikut daftar ketika saya mengikuti MBKM Dicoding Indonesia,karena dari beberapa mentor di Dicoding.",
+      "Is one of the platforms that I signed up for when I joined the Dicoding Indonesia MBKM, because of several mentors at Dicoding.",
     image: idcamp,
   },
   {
     title: "Kampus Merdeka",
     description:
-      "Adalah platform yang memberikan inovasi yang dibuat oleh Kemendikbud agar dapat menghasilkan lulusan yang siap menghadapi perubahan sosial, budaya. ",
+      "It is a platform that provides innovations created by the Ministry of Education and Culture in order to produce graduates who are ready to face social, cultural changes.",
     image: kampus,
   },
 ];
@@ -158,7 +158,7 @@ export const projects: IProject[] = [
   {
     id: 1,
     title: "JoRan (Jokes Random)",
-    description: "Sebuah project menggunakan tools logika react js",
+    description: "A project using react js logic tools",
     image_path: "/images/projects/1.png",
     deployed_url: "https://jokes-random-v1.netlify.app/",
     github_url: "https://github.com/fmpangestu/Jokes-random",
@@ -168,7 +168,7 @@ export const projects: IProject[] = [
   {
     id: 2,
     title: "Todo App",
-    description: "Sebuah project React dengan Logika Todo",
+    description: "A React project with Todo Logic",
     image_path: "/images/projects/2.png",
     deployed_url: "https://todo-apps-v1.netlify.app/",
     github_url: "https://github.com/fmpangestu/Todo-app",
@@ -178,7 +178,7 @@ export const projects: IProject[] = [
   {
     id: 3,
     title: "Note Apps",
-    description: "Sebuah project React dengan Logika Note",
+    description: "A React project with Note Logic",
     image_path: "/images/projects/3.png",
     deployed_url: "https://shooping-notesqu.netlify.app/",
     github_url: "https://github.com/fmpangestu/shopping-note",
@@ -188,8 +188,7 @@ export const projects: IProject[] = [
   {
     id: 4,
     title: "Wisata_ID",
-    description:
-      "Sebuah project team dengan react,express.js, yang sangat kompleks",
+    description: "A project team with react, express.js, which is very complex",
     image_path: "/images/projects/4.png",
     deployed_url: "https://wisataid.vercel.app/",
     github_url: "https://github.com/fmpangestu/wisataid",
@@ -199,8 +198,7 @@ export const projects: IProject[] = [
   {
     id: 5,
     title: "Yok Ngopi",
-    description:
-      "Sebuah project yang menggunakan vanila language,html css javascript",
+    description: "A project that uses vanilla language, html css javascript",
     image_path: "/images/projects/5.png",
     deployed_url: "https://yokngopicuy.netlify.app/",
     github_url: "https://github.com/fmpangestu/restaurant_web",
@@ -211,7 +209,7 @@ export const projects: IProject[] = [
     id: 6,
     title: "Web Chat Clone",
     description:
-      "Sebuah project yang di kembangkan dengan MERN Stack, yang bisa digunakan secara online",
+      "A project developed with MERN Stack, which can be used online",
     image_path: "/images/projects/6.png",
     github_url: "https://github.com/fmpangestu/chat-api-MERN",
     category: ["react", "node", "express", "mongodb"],
@@ -221,7 +219,7 @@ export const projects: IProject[] = [
     id: 7,
     title: "Beasiswa Finder",
     description:
-      "Sebuah project yang di kembangkan dengan laravel dan juga dengan MySQL. sebagai project team",
+      "A project developed with laravel and also with MySQL. as project team",
     image_path: "/images/projects/7.png",
     github_url: "https://github.com/fmpangestu/beasiswa-finder",
     category: ["laravel", "mysql"],
@@ -231,7 +229,7 @@ export const projects: IProject[] = [
     id: 8,
     title: "Sistem Informasi Desa Sitemu",
     description:
-      "Sebuah project yang di kembangkan dengan UI/UX yang menarik, dan juga pengembangan react js, dan beberapa fitur yang di utamakan",
+      "A project developed with an attractive UI/UX, and also react js development, and some features that are prioritized.",
     image_path: "/images/projects/8.png",
     deployed_url: "https://sitemubersatu.com/",
     github_url: "https://github.com/fmpangestu/desa-sitemu",
@@ -242,7 +240,7 @@ export const projects: IProject[] = [
     id: 9,
     title: "My Portfolio",
     description:
-      "Sebuah project portfolio pribadi yang di kembangkan dengan ReactJS dan TailwindCSS,",
+      "A personal portfolio project developed with ReactJS and TailwindCSS.",
     image_path: "/images/projects/9.png",
     deployed_url: "https://farhanmp.xyz",
     github_url: "https://github.com/fmpangestu/portfolioqu",
@@ -252,7 +250,7 @@ export const projects: IProject[] = [
   {
     id: 10,
     title: "Tabungan Sederhana",
-    description: "Sebuah project yang di kembangkan dengan typescript logika",
+    description: "A project developed with typescript logic.",
     image_path: "/images/projects/10.png",
     github_url: "https://github.com/fmpangestu/learn-ts",
     category: ["typescript", "html", "css"],
@@ -261,8 +259,7 @@ export const projects: IProject[] = [
   {
     id: 11,
     title: "Logika login credentials dan google dengan NextJs",
-    description:
-      "Sebuah project yang di kembangkan dengan NextJs dan juga NextAuth",
+    description: "A project developed with NextJs and NextAuth.",
     image_path: "/images/projects/11.png",
     deployed_url: "https://my-app-next-fmp.vercel.app/",
     github_url: "https://github.com/fmpangestu/next-ts",
@@ -275,35 +272,35 @@ export const sertificats: ISertificate[] = [
   {
     id: 1,
     title: "Front End Web Development Expert",
-    description: "Sertifikat kelulusan dari Dicoding Indonesia",
+    description: "Certificate of completion from Dicoding Indonesia",
     image_path: "/images/sertificate/1.png",
     sertificate_url: "https://www.dicoding.com/certificates/4EXG4MYEQPRL",
   },
   {
     id: 2,
     title: "Prinsip Dasar Pemrograman SOLID",
-    description: "Sertifikat kelulusan dari Dicoding Indonesia",
+    description: "Certificate of completion from Dicoding Indonesia",
     image_path: "/images/sertificate/6.png",
     sertificate_url: "https://www.dicoding.com/certificates/QLZ9R9VGMP5D",
   },
   {
     id: 3,
     title: "Fundamental Front End Web",
-    description: "Sertifikat kelulusan dari Dicoding Indonesia",
+    description: "Certificate of completion from Dicoding Indonesia",
     image_path: "/images/sertificate/3.png",
     sertificate_url: "https://www.dicoding.com/certificates/JLX1W2VKJP72",
   },
   {
     id: 4,
     title: "JavaScript Dasar",
-    description: "Sertifikat kelulusan dari Dicoding Indonesia",
+    description: "Certificate of completion from Dicoding Indonesia",
     image_path: "/images/sertificate/4.png",
     sertificate_url: "https://www.dicoding.com/certificates/N9ZO5VYGDPG5",
   },
   {
     id: 5,
     title: "Application Back End Pemula",
-    description: "Sertifikate kelulusan dari Dicoding Indonesia",
+    description: "Certificate of completion from Dicoding Indonesia",
     image_path: "/images/sertificate/7.png",
     sertificate_url: "https://www.dicoding.com/certificates/MRZM85L0KZYQ",
   },

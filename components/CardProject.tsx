@@ -34,7 +34,7 @@ const ProjectCard: FunctionComponent<{
 
   if (!mounted) return null;
   return (
-    <div className=" ">
+    <div className="w-full items-center justify-center">
       <Image
         src={image_path}
         alt={title}
@@ -50,7 +50,7 @@ const ProjectCard: FunctionComponent<{
           variants={stagger}
           initial="initial"
           animate="animate"
-          className="grid md:grid-cols-2 gap-y-2 p-2 md:p-10 absolute top-0 left-0 z-0 w-full h-auto gap-x-12 text-slate-900 dark:text-white  bg-white dark:bg-gradient-to-r dark:from-slate-950 dark:to-slate-800 rounded-xl "
+          className="grid md:grid-cols-2 gap-y-2 p-3 md:p-10 fixed  top-1/4 lg:top-1/4  left-0 mx-3 sm:mx-10 lg:mx-48 2xl:mx-[28rem] z-10  h-auto gap-x-12 text-slate-900 dark:text-white  bg-white dark:bg-gradient-to-r dark:from-slate-950 dark:to-slate-800 rounded-xl shadow-custom-light dark:shadow-custom-dark"
         >
           <motion.div variants={fadeUp} className="">
             <Image
