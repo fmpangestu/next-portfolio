@@ -39,7 +39,7 @@ const SertifCard: FunctionComponent<{
           variants={stagger}
           initial="initial"
           animate="animate"
-          className="grid md:grid-cols-2 p-3 md:p-10 fixed top-1/4 lg:top-1/4  left-0 mx-3 sm:mx-10 lg:mx-48 2xl:mx-[28rem] z-10   h-auto gap-x-5 text-slate-900 dark:text-white bg-white dark:bg-gradient-to-r dark:from-slate-950 dark:to-slate-800 rounded-xl shadow-custom-light dark:shadow-custom-dark"
+          className="grid md:grid-cols-2 p-3 md:p-10  fixed top-1/4 lg:top-1/4  left-0 mx-3 sm:mx-10 lg:mx-48 2xl:mx-[28rem] z-10   h-auto gap-x-5 text-slate-900 dark:text-white bg-white dark:bg-gradient-to-r dark:from-slate-950 dark:to-slate-800 rounded-xl shadow-custom-light dark:shadow-custom-dark"
         >
           <motion.div variants={fadeUp} className="">
             <Image
@@ -69,12 +69,13 @@ const SertifCard: FunctionComponent<{
               </a>
             </motion.div>
           </div>
-          <button
+          <motion.button
+            variants={fadeUp}
             className="absolute right-4 top-3 focus:outline-none rounded-full p-1 bg-slate-900 dark:bg-slate-100 text-slate-100 dark:text-slate-900"
             onClick={() => setShowDetail(null)}
           >
             <AiOutlineClose size={30} />
-          </button>
+          </motion.button>
         </motion.div>
       )}
     </div>

@@ -74,12 +74,13 @@ const Sidebar = () => {
               Bahasa Indonesia
             </motion.a>
           </div>
-          <button
+          <motion.button
+            variants={fadeUp}
             className="absolute right-2 top-2 focus:outline-none rounded-full p-1 bg-slate-900 dark:bg-slate-100 text-slate-100 dark:text-slate-900"
             onClick={() => setShowDetail(false)}
           >
             <AiOutlineClose size={15} />
-          </button>
+          </motion.button>
         </motion.div>
       )}
       {/* //? Social Media */}
