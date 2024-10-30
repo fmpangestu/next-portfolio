@@ -84,7 +84,7 @@ const ProjectCard: FunctionComponent<{
               ) : (
                 <motion.a
                   variants={fadeUp}
-                  className="flex space-x-3 items-center justify-center dark:bg-slate-800 bg-slate-300 px-2 py-1 rounded-lg opacity-50 "
+                  className="flex space-x-3 items-center justify-center dark:bg-slate-800/40 bg-slate-300/40 dark:text-slate-300/40 text-slate-950/50 px-2 py-1 rounded-lg "
                   href={deployed_url}
                   target="blank"
                 >
@@ -101,23 +101,27 @@ const ProjectCard: FunctionComponent<{
             <motion.h5 variants={fadeUp} className="text-sm">
               {description}
             </motion.h5>
-            <motion.div variants={fadeUp} className="flex  flex-wrap gap-3">
+            <motion.div
+              variants={fadeUp}
+              className="flex flex-wrap w-full text-center gap-3 "
+            >
               {key_techs.map((tech) => (
                 <span
                   key={tech}
-                  className="dark:bg-slate-800 bg-slate-300 px-2 py-1 rounded-lg"
+                  className="text-[0.8rem] dark:bg-slate-800 bg-slate-300 px-2 py-1 rounded-lg "
                 >
                   {tech}
                 </span>
               ))}
             </motion.div>
           </div>
-          <button
+          <motion.button
+            variants={fadeUp}
             className="absolute right-4 top-3 focus:outline-none rounded-full p-1 bg-slate-900 dark:bg-slate-100 text-slate-100 dark:text-slate-900"
             onClick={() => setShowDetail(null)}
           >
             <AiOutlineClose size={30} />
-          </button>
+          </motion.button>
         </motion.div>
       )}
     </div>
