@@ -266,6 +266,16 @@ export const projects: IProject[] = [
     category: ["nextJs", "typescript"],
     key_techs: ["NextJS", "TypeScript", "TailwindCss", "Firebase"],
   },
+  {
+    id: 12,
+    title: "Slicing One Page using HTML & CSS",
+    description: "A project desktop app developed with HTML and CSS.",
+    image_path: "/images/projects/12.png",
+    deployed_url: "https://slicingoneday.vercel.app/",
+    github_url: "https://github.com/fmpangestu/slicing-one-day.git",
+    category: ["html", "css"],
+    key_techs: ["HTML", "CSS"],
+  },
 ];
 
 export const sertificats: ISertificate[] = [
