@@ -8,6 +8,7 @@ import { FaSquareGithub } from "react-icons/fa6";
 import { LuLink } from "react-icons/lu";
 import { motion } from "framer-motion";
 import { fadeUp, stagger } from "@/animate";
+import { FaLink } from "react-icons/fa";
 const ProjectCard: FunctionComponent<{
   project: IProject;
   showDetail: null | number;
@@ -22,6 +23,7 @@ const ProjectCard: FunctionComponent<{
     category,
     key_techs,
     id,
+    references,
   },
   showDetail,
   setShowDetail,
@@ -94,7 +96,7 @@ const ProjectCard: FunctionComponent<{
               )}
             </div>
           </motion.div>
-          <div className=" flex flex-col gap-3">
+          <div className=" flex flex-col gap-3 ">
             <motion.h2 variants={fadeUp} className="font-semibold text-xl">
               {title}
             </motion.h2>
@@ -113,6 +115,24 @@ const ProjectCard: FunctionComponent<{
                   {tech}
                 </span>
               ))}
+            </motion.div>
+            <motion.div
+              variants={fadeUp}
+              className=" flex items-center justify-center "
+            >
+              {references ? (
+                <a
+                  href={references}
+                  className="text-[0.8rem] flex items-center justify-center gap-2 w-full dark:bg-slate-800 bg-slate-300  py-2 rounded-lg  "
+                  target="blank"
+                  title="References from codedesign.dev"
+                >
+                  <FaLink />
+                  References Design
+                </a>
+              ) : (
+                ""
+              )}
             </motion.div>
           </div>
           <motion.button

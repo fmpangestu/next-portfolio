@@ -24,6 +24,7 @@ export interface IProject {
   github_url: string;
   category: Category[];
   key_techs: string[];
+  references?: string;
 }
 export interface ISertificate {
   id: number;

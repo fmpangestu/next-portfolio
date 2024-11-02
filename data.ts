@@ -275,6 +275,7 @@ export const projects: IProject[] = [
     github_url: "https://github.com/fmpangestu/slicing-one-day.git",
     category: ["html", "css"],
     key_techs: ["HTML", "CSS"],
+    references: "https://codedesign.dev/challenge/online-learning",
   },
   {
     id: 13,
