@@ -276,6 +276,17 @@ export const projects: IProject[] = [
     category: ["html", "css"],
     key_techs: ["HTML", "CSS"],
   },
+  {
+    id: 13,
+    title: "SellSpot - E-commerce profile",
+    description:
+      "A project responsive web profile ecommerce with Nextjs and Tailwindcss.",
+    image_path: "/images/projects/13.png",
+    deployed_url: "https://selllsop.vercel.app/",
+    github_url: "https://github.com/fmpangestu/slicing-using-nextjs.git",
+    category: ["nextJs", "css", "typescript"],
+    key_techs: ["NextJs", "TailwindCss", "TypeScript"],
+  },
 ];
 
 export const sertificats: ISertificate[] = [
