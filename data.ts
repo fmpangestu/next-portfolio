@@ -288,6 +288,17 @@ export const projects: IProject[] = [
     category: ["nextJs", "css", "typescript"],
     key_techs: ["NextJs", "TailwindCss", "TypeScript"],
   },
+  {
+    id: 14,
+    title: "ChatYukWeb App",
+    description:
+      "a project developed with NextJs, Convex, Clerk, and TypeScript. this project is a chat application thas is very simple and easy to use.",
+    image_path: "/images/projects/14.png",
+    deployed_url: "https://chatingyuk.vercel.app/",
+    github_url: "https://github.com/fmpangestu/ChatYuk",
+    category: ["nextJs", "typescript"],
+    key_techs: ["NextJs", "TailwindCss", "TypeScript"],
+  },
 ];
 
 export const sertificats: ISertificate[] = [
