@@ -49,7 +49,7 @@ export default function ResumePage() {
       <div className="grid gap-6 md:grid-cols-2">
         <div>
           <h6 className="my-3 text-xl font-bold tracking-wide">
-            Language & Framework
+            Languages and Frameworks
           </h6>
           <div className="my-2">
             {languages.map((language) => (
