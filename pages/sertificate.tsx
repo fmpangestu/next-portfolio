@@ -15,7 +15,7 @@ const SertificatePage = () => {
       className="px-5 py-2 overflow-y-scroll custom-scrollbar "
       style={{ height: "65vh" }}
     >
-      <h1>Sertifikat dan Licensi</h1>
+      <h1>Certificates and License</h1>
       <motion.div
         variants={stagger}
         initial="initial"
