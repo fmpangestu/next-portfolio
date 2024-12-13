@@ -27,9 +27,9 @@ const Navbar = () => {
   const pathname = usePathname();
   useEffect(() => {
     if (pathname === "/") setActiveItem("About");
-    if (pathname === "/project") setActiveItem("Project");
+    if (pathname === "/projects") setActiveItem("Projects");
     if (pathname === "/resume") setActiveItem("Resume");
-    if (pathname === "/sertificate") setActiveItem("Sertificate");
+    if (pathname === "/certificates") setActiveItem("Certificates");
   }, [pathname]);
   return (
     <div className="flex items-center justify-between px-5 py-2 my-2">
