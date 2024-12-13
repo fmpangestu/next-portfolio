@@ -290,7 +290,7 @@ export const projects: IProject[] = [
   },
   {
     id: 14,
-    title: "ChatYukWeb App",
+    title: "ChatYuk Web App",
     description:
       "a project developed with NextJs, Convex, Clerk, and TypeScript. this project is a chat application thas is very simple and easy to use.",
     image_path: "/images/projects/14.png",
