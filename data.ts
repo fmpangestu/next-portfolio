@@ -305,7 +305,7 @@ export const projects: IProject[] = [
     description:
       "a project developed with NextJs, TailwindCss, and TypeScript. this project is a quiz application that is very simple and easy to use, for kids.",
     image_path: "/images/projects/15.png",
-    deployed_url: "httpsL//quiztksd.vercel.app",
+    deployed_url: "https://quiztksd.vercel.app",
     github_url: "https://github.com/fmpangestu/quiz-sd-tk-mathematics-nextjs",
     category: ["nextJs", "typescript"],
     key_techs: ["NextJs", "TailwindCss", "TypeScript"],
