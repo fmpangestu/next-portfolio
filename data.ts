@@ -290,12 +290,23 @@ export const projects: IProject[] = [
   },
   {
     id: 14,
-    title: "ChatYukWeb App",
+    title: "ChatYuk Web App",
     description:
       "a project developed with NextJs, Convex, Clerk, and TypeScript. this project is a chat application thas is very simple and easy to use.",
     image_path: "/images/projects/14.png",
     deployed_url: "https://chatingyuk.vercel.app/",
     github_url: "https://github.com/fmpangestu/ChatYuk",
+    category: ["nextJs", "typescript"],
+    key_techs: ["NextJs", "TailwindCss", "TypeScript"],
+  },
+  {
+    id: 15,
+    title: "Web app - quiz mathematics for kids ",
+    description:
+      "a project developed with NextJs, TailwindCss, and TypeScript. this project is a quiz application that is very simple and easy to use, for kids.",
+    image_path: "/images/projects/15.png",
+    deployed_url: "httpsL//quiztksd.vercel.app",
+    github_url: "https://github.com/fmpangestu/quiz-sd-tk-mathematics-nextjs",
     category: ["nextJs", "typescript"],
     key_techs: ["NextJs", "TailwindCss", "TypeScript"],
   },
