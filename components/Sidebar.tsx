@@ -34,9 +34,17 @@ const Sidebar = () => {
         // layout="intrinsic"
         className="object-cover w-48 h-48 mx-auto rounded-full  lg:w-32 lg:h-32 "
       />
-      <h3 className="my-4 text-3xl font-medium tracking-wider font-kaushan text-sky-700 dark:text-sky-600">
+      <h3 className="my-4 flex items-center justify-center text-3xl font-medium tracking-wider font-kaushan text-sky-700 dark:text-sky-600">
         <span className="text-blues dark:text-slate-200">Farhan </span>
         Mp
+        <Image
+          src="/verified.png"
+          alt="verified"
+          width={25}
+          height={10}
+          quality={100}
+          className="ml-3 mt-1 w-6.5 h-6.5"
+        />
       </h3>
       <p className="w-full py-2 my-3 bg-gray-200 dark:bg-slate-950 rounded-lg">
         Web Developer
