@@ -5,10 +5,16 @@ import { Category } from "@/type";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { fadeUp, routeAnimate, stagger } from "@/animate";
+import { NextSeo } from "next-seo"; // <-- Tambahkan ini
+import React from "react"; // <-- Tambahkan ini
+
 export default function ProjectPage() {
   const [projects, setProjects] = useState(projectsData);
   const [active, setActive] = useState("all");
   const [showDetail, setShowDetail] = useState<number | null>(null);
+  const pageTitle = "My Projects";
+  const pageDescription =
+    "Jelajahi berbagai proyek yang telah saya kembangkan.";
 
   const handlerFilterCategory = (category: Category | "all") => {
     if (category === "all") {
@@ -24,38 +30,50 @@ export default function ProjectPage() {
     setActive(category);
   };
   return (
-    <motion.div
-      variants={routeAnimate}
-      initial="initial"
-      animate="animate"
-      exit="exit"
-      className="px-5 py-2 overflow-y-scroll custom-scrollbar "
-      style={{ height: "65vh" }}
-    >
-      <ProjectNavbar
-        handlerFilterCategory={handlerFilterCategory}
-        active={active}
+    <React.Fragment>
+      {" "}
+      {/* <-- Bungkus dengan Fragment */}
+      <NextSeo
+        title={pageTitle}
+        description={pageDescription}
+        openGraph={{
+          title: `${pageTitle} | Farhan Maulana Pangestu Portfolio`,
+          description: pageDescription,
+        }}
       />
       <motion.div
-        variants={stagger}
-        animate="animate"
+        variants={routeAnimate}
         initial="initial"
-        className="grid grid-cols-12 gap-4 my-2 2xl:mt-1 relative"
+        animate="animate"
+        exit="exit"
+        className="px-5 py-2 overflow-y-scroll custom-scrollbar "
+        style={{ height: "65vh" }}
       >
-        {projects.map((project) => (
-          <motion.div
-            variants={fadeUp}
-            key={project.title}
-            className="col-span-12 sm:col-span-6 lg:col-span-4 bg-gray-300 rounded-lg dark:bg-slate-950"
-          >
-            <ProjectCard
-              project={project}
-              showDetail={showDetail}
-              setShowDetail={setShowDetail}
-            />
-          </motion.div>
-        ))}
+        <ProjectNavbar
+          handlerFilterCategory={handlerFilterCategory}
+          active={active}
+        />
+        <motion.div
+          variants={stagger}
+          animate="animate"
+          initial="initial"
+          className="grid grid-cols-12 gap-4 my-2 2xl:mt-1 relative"
+        >
+          {projects.map((project) => (
+            <motion.div
+              variants={fadeUp}
+              key={project.title}
+              className="col-span-12 sm:col-span-6 lg:col-span-4 bg-gray-300 rounded-lg dark:bg-slate-950"
+            >
+              <ProjectCard
+                project={project}
+                showDetail={showDetail}
+                setShowDetail={setShowDetail}
+              />
+            </motion.div>
+          ))}
+        </motion.div>
       </motion.div>
-    </motion.div>
+    </React.Fragment> // <-- Tutup Fragment
   );
 }

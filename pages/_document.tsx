@@ -12,10 +12,7 @@ export default function Document() {
           href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
           rel="stylesheet"
         />
-        <meta
-          name="description"
-          content="I'm Farhan, a Fullstack Developer, and a Freelancer."
-        />
+        {/* <meta name="description" ... /> <-- Hapus baris ini */}
         <link rel="icon" href="/boy.png" />
       </Head>
       <body className="antialiased bg-gradient-to-r from-blues to-slate-100 dark:from-slate-950 dark:to-slate-800">
