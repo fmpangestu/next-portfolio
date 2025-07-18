@@ -310,6 +310,17 @@ export const projects: IProject[] = [
     category: ["nextJs", "typescript"],
     key_techs: ["NextJs", "TailwindCss", "TypeScript"],
   },
+  {
+    id: 16,
+    title: "Web app - Healthy Foods Recommendation System ",
+    description:
+      "a project developed with NextJs, TailwindCss, and TypeScript. this project is a healthy foods recommendation system that is very simple and easy to use.",
+    image_path: "/images/projects/16.png",
+    deployed_url: "https://hitungkalori.vercel.app",
+    github_url: "https://github.com/fmpangestu/food.git",
+    category: ["nextJs", "typescript"],
+    key_techs: ["NextJs", "TailwindCss", "TypeScript", "mongodb"],
+  },
 ];
 
 export const sertificats: ISertificate[] = [
