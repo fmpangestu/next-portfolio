@@ -59,7 +59,7 @@ export default function ResumePage() {
             <h1 className="font-semibold">Experience</h1>
             <h3 className="font-semibold">Internship</h3>
             <h4 className="text-[.8rem] font-semibold">
-              PT. TECH ACADEMY INTERNATIONAL (2024 - Present)
+              PT. TECH ACADEMY INTERNATIONAL (2024 - 2025)
             </h4>
             <p>I interned as a Front End Engineering Website Developer </p>
           </motion.div>

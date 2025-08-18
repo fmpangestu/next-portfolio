@@ -157,6 +157,7 @@ export const tools: ISkill[] = [
 export const projects: IProject[] = [
   {
     id: 1,
+    username: "JoRan",
     title: "JoRan (Jokes Random)",
     description: "A project using react js logic tools",
     image_path: "/images/projects/1.png",
@@ -167,6 +168,7 @@ export const projects: IProject[] = [
   },
   {
     id: 2,
+    username: "Todo",
     title: "Todo App",
     description: "A React project with Todo Logic",
     image_path: "/images/projects/2.png",
@@ -177,6 +179,7 @@ export const projects: IProject[] = [
   },
   {
     id: 3,
+    username: "Note",
     title: "Note Apps",
     description: "A React project with Note Logic",
     image_path: "/images/projects/3.png",
@@ -187,6 +190,7 @@ export const projects: IProject[] = [
   },
   {
     id: 4,
+    username: "Wisata_ID",
     title: "Wisata_ID",
     description: "A project team with react, express.js, which is very complex",
     image_path: "/images/projects/4.png",
@@ -197,6 +201,7 @@ export const projects: IProject[] = [
   },
   {
     id: 5,
+    username: "Yok_Ngopi",
     title: "Yok Ngopi",
     description: "A project that uses vanilla language, html css javascript",
     image_path: "/images/projects/5.png",
@@ -207,6 +212,7 @@ export const projects: IProject[] = [
   },
   {
     id: 6,
+    username: "Web_Chat",
     title: "Web Chat Clone",
     description:
       "A project developed with MERN Stack, which can be used online",
@@ -217,6 +223,7 @@ export const projects: IProject[] = [
   },
   {
     id: 7,
+    username: "Finder_Web",
     title: "Beasiswa Finder",
     description:
       "A project developed with laravel and also with MySQL. as project team",
@@ -227,6 +234,7 @@ export const projects: IProject[] = [
   },
   {
     id: 8,
+    username: "Sitemu.com",
     title: "Sistem Informasi Desa Sitemu",
     description:
       "A project developed with an attractive UI/UX, and also react js development, and some features that are prioritized.",
@@ -238,6 +246,7 @@ export const projects: IProject[] = [
   },
   {
     id: 9,
+    username: "Portfolio",
     title: "My Portfolio",
     description:
       "A personal portfolio project developed with ReactJS and TailwindCSS.",
@@ -249,6 +258,7 @@ export const projects: IProject[] = [
   },
   {
     id: 10,
+    username: "TabunganKu",
     title: "Tabungan Sederhana",
     description: "A project developed with typescript logic.",
     image_path: "/images/projects/10.png",
@@ -258,6 +268,7 @@ export const projects: IProject[] = [
   },
   {
     id: 11,
+    username: "Loika Login",
     title: "Logika login credentials dan google dengan NextJs",
     description: "A project developed with NextJs and NextAuth.",
     image_path: "/images/projects/11.png",
@@ -268,6 +279,7 @@ export const projects: IProject[] = [
   },
   {
     id: 12,
+    username: "Slicing One Page",
     title: "Slicing One Page using HTML & CSS",
     description: "A project desktop app developed with HTML and CSS.",
     image_path: "/images/projects/12.png",
@@ -279,6 +291,7 @@ export const projects: IProject[] = [
   },
   {
     id: 13,
+    username: "SellSpot",
     title: "SellSpot - E-commerce profile",
     description:
       "A project responsive web profile ecommerce with Nextjs and Tailwindcss.",
@@ -290,6 +303,7 @@ export const projects: IProject[] = [
   },
   {
     id: 14,
+    username: "ChatYuk",
     title: "ChatYuk Web App",
     description:
       "a project developed with NextJs, Convex, Clerk, and TypeScript. this project is a chat application thas is very simple and easy to use.",
@@ -301,6 +315,7 @@ export const projects: IProject[] = [
   },
   {
     id: 15,
+    username: "Quiz_Math",
     title: "Web app - quiz mathematics for kids ",
     description:
       "a project developed with NextJs, TailwindCss, and TypeScript. this project is a quiz application that is very simple and easy to use, for kids.",
@@ -312,6 +327,7 @@ export const projects: IProject[] = [
   },
   {
     id: 16,
+    username: "Healthy_Foods",
     title: "Web app - Healthy Foods Recommendation System ",
     description:
       "a project developed with NextJs, TailwindCss, and TypeScript. this project is a healthy foods recommendation system that is very simple and easy to use.",
