@@ -15,7 +15,7 @@ export default function Document() {
         {/* <meta name="description" ... /> <-- Hapus baris ini */}
         <link rel="icon" href="/boy.png" />
       </Head>
-      <body className="antialiased bg-gradient-to-r from-blues to-slate-100 dark:from-slate-950 dark:to-slate-800">
+      <body className="antialiased bg-neutral-700/20 dark:bg-gradient-to-r from-blues to-slate-100 dark:from-slate-950 dark:to-slate-800">
         <Main />
         <NextScript />
       </body>
