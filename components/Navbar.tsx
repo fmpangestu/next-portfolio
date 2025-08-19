@@ -1,4 +1,4 @@
-import { CodeXml, FileUser, LayoutGrid, Tag } from "lucide-react";
+import { CodeXml, DollarSign, FileUser, LayoutGrid } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FunctionComponent, useEffect, useState } from "react";
@@ -24,18 +24,27 @@ const NavItem: FunctionComponent<{
   isModal,
   onClick,
 }) => {
-  // Jika isModal true, render sebagai button dengan hover effect
+  // Jika isModal true, render sebagai button dengan corner brackets di luar
   if (isModal) {
     return (
-      <button
-        onClick={onClick}
-        className={`${className} group overflow-hidden transition-all duration-700 ease-in-out w-8 hover:w-20`}
-      >
-        <div className="flex items-center justify-start whitespace-nowrap">
-          {icons && <span className="flex-shrink-0 min-w-4">{icons}</span>}
-          <span className="ml-2  ">{name}</span>
-        </div>
-      </button>
+      <div className="relative p-0.5">
+        {/* Corner Brackets - DI LUAR BUTTON */}
+        {/* Top Left */}
+        <div className="absolute -top-0.5 -left-1 w-4 h-3 border-l-2 border-t-2 dark:border-white dark:group-hover:border-white border-blue-400 group-hover:border-blue-300 transition-colors duration-300"></div>
+
+        {/* Bottom Right */}
+        <div className="absolute -bottom-0.5 -right-1 w-4 h-3 border-r-2 border-b-2 dark:border-white dark:group-hover:border-white border-blue-400 group-hover:border-blue-300 transition-colors duration-300"></div>
+
+        <button
+          onClick={onClick}
+          className={`${className} group overflow-hidden transition-all duration-700 ease-in-out w-8 hover:w-20 relative z-10`}
+        >
+          <div className="flex items-center justify-start whitespace-nowrap">
+            {icons && <span className="flex-shrink-0 min-w-4">{icons}</span>}
+            <span className="ml-2">{name}</span>
+          </div>
+        </button>
+      </div>
     );
   }
 
@@ -70,14 +79,14 @@ const Navbar = () => {
   return (
     <>
       <div className="flex items-center justify-between px-5 py-2 my-2">
-        {/* Pricing sebagai modal button dengan hover effect */}
-        <div className="flex justify-center items-center space-x-2">
+        {/* Pricing sebagai modal button dengan corner brackets */}
+        <div className="flex justify-center items-center space-x-4">
           <NavItem
             setActiveItem={setActiveItem}
-            className="hidden sm:block dark:bg-blue-950 bg-blue-950 text-white font-medium py-1 px-2 rounded-md shadow text-sm"
+            className="hidden sm:block dark:bg-blue-950 bg-blue-950 text-white font-medium py-1 px-2 rounded-md shadow text-sm hover:shadow-lg"
             name="Pricing"
             route="/"
-            icons={<Tag className="w-4 h-4" />}
+            icons={<DollarSign className="w-4 h-4" />}
             isModal={true}
             onClick={() => setIsPricingModalOpen(true)}
           />
