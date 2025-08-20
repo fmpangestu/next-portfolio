@@ -7,7 +7,7 @@ import { ThemeProvider } from "next-themes";
 import { AnimatePresence } from "framer-motion";
 import { DefaultSeo } from "next-seo"; // <-- Tambahkan ini
 import PricingCarousel from "@/components/PricingCarousel";
-
+import PortfolioChatbot from "@/components/PortfolioChatbot";
 // Konfigurasi SEO Default (Anda bisa pindahkan ke file terpisah jika mau)
 const DEFAULT_SEO = {
   title: "Farhan Maulana Pangestu",
@@ -56,6 +56,7 @@ export default function App({ Component, pageProps, router }: AppProps) {
             <PricingCarousel />
           </div>
         </div>
+        <PortfolioChatbot />
       </div>
     </ThemeProvider>
   );

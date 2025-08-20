@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@farhanmp/ai-chatbot-widget": "^1.0.5",
     "framer-motion": "^11.11.10",
     "lucide-react": "^0.539.0",
     "next": "15.0.1",
