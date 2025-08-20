@@ -25,6 +25,7 @@ export default function PortfolioChatbot() {
       /* Reset package CSS dan apply CSS yang benar */
       .chatbot-container {
         position: relative !important;
+        z-index: 9999 !important;
       }
 
       .chatbot-popup {
@@ -40,6 +41,7 @@ export default function PortfolioChatbot() {
         border-radius: 10px !important;
         box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0.1), 0 0 32px 0 rgba(0, 0, 0, 0.1) !important;
         transition: all 0.1s ease-in-out !important;
+                z-index: 9999 !important;
       }
 
       .containers.show-chatbot .chatbot-popup {
@@ -158,6 +160,7 @@ export default function PortfolioChatbot() {
         display: flex !important;
         align-items: center !important;
         gap: 11px !important;
+        z-index: 9999 !important;
       }
 
       .chatbot-body .bot-message svg {

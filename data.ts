@@ -337,6 +337,17 @@ export const projects: IProject[] = [
     category: ["nextJs", "typescript"],
     key_techs: ["NextJs", "TailwindCss", "TypeScript", "mongodb"],
   },
+  {
+    id: 17,
+    username: "Chatbot AI",
+    title: "Web Chatbot AI Asistent",
+    description:
+      "A project developed with NextJs, TailwindCss, and TypeScript. this project is a chatbot application that is very simple and easy to use.",
+    image_path: "/images/projects/17.png",
+    github_url: "https://github.com/fmpangestu/Chatbot-Asisten---NextJs.git",
+    category: ["nextJs", "javascript"],
+    key_techs: ["NextJs", "JavaScript", "TailwindCss", "GemniAI"],
+  },
 ];
 
 export const sertificats: ISertificate[] = [
