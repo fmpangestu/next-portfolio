@@ -10,7 +10,19 @@ const PricingCarousel = () => {
   useEffect(() => {
     setMounted(true);
   }, []);
+  const myWhatsAppNumber = "6283199412171"; // <-- GANTI DENGAN NOMOR ANDA!
 
+  const handleSelectPlan = (planName: string) => {
+    const message = `Halo, saya tertarik dengan layanan "${planName}" yang saya lihat di portofolio Anda. Bisa tolong berikan info lebih lanjut?`;
+
+    // encodeURIComponent memastikan karakter seperti spasi, dll., aman untuk URL
+    const encodedMessage = encodeURIComponent(message);
+
+    const whatsappURL = `https://wa.me/${myWhatsAppNumber}?text=${encodedMessage}`;
+
+    // Membuka WhatsApp di tab baru
+    window.open(whatsappURL, "_blank");
+  };
   const pricingPlans = [
     {
       name: "Company Profile",
@@ -204,6 +216,7 @@ const PricingCarousel = () => {
 
             {/* CTA Button */}
             <button
+              onClick={() => handleSelectPlan(currentPlan.name)}
               className={`w-full py-2 px-4 rounded-lg text-sm font-medium transition-all duration-300 ${
                 currentPlan.isHighlight
                   ? "bg-white text-blue-600 hover:bg-gray-100"

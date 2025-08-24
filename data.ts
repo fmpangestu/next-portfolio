@@ -8,6 +8,7 @@ import {
   FaLaravel,
   FaNodeJs,
   FaPhp,
+  FaPython,
   FaReact,
 } from "react-icons/fa";
 import dicoding from "@/public/images/experience/dicoding1.jpeg";
@@ -23,7 +24,14 @@ import kampus from "@/public/images/experience/kampusmerdeka.png";
 // import project8 from "@/public/images/projects/8.png";
 
 import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
-import { SiExpress, SiNotion, SiPostman, SiTypescript } from "react-icons/si";
+import {
+  SiExpress,
+  SiMongodb,
+  SiMysql,
+  SiNotion,
+  SiPostman,
+  SiTypescript,
+} from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
 import { FaSquareGithub } from "react-icons/fa6";
 import { CgFigma } from "react-icons/cg";
@@ -71,37 +79,37 @@ export const services: IService[] = [
 export const languages: ISkill[] = [
   {
     title: "ReactJS",
-    level: "85%",
+    level: "88%",
     Icon: FaReact,
   },
   {
     title: "NextJS",
-    level: "70%",
+    level: "95%",
     Icon: RiNextjsFill,
   },
   {
     title: "TailwindCSS",
-    level: "85%",
+    level: "88%",
     Icon: RiTailwindCssFill,
   },
   {
     title: "NodeJS",
-    level: "80%",
+    level: "85%",
     Icon: FaNodeJs,
   },
   {
     title: "ExpressJS",
-    level: "65%",
+    level: "70%",
     Icon: SiExpress,
   },
   {
     title: "Laravel",
-    level: "60%",
+    level: "70%",
     Icon: FaLaravel,
   },
   {
     title: "TypeScript",
-    level: "70%",
+    level: "85%",
     Icon: SiTypescript,
   },
   {
@@ -111,35 +119,40 @@ export const languages: ISkill[] = [
   },
   {
     title: "PHP",
-    level: "60%",
+    level: "70%",
     Icon: FaPhp,
+  },
+  {
+    title: "Python",
+    level: "70%",
+    Icon: FaPython,
   },
 ];
 
 export const tools: ISkill[] = [
   {
     title: "Visual Studio Code",
-    level: "95%",
+    level: "98%",
     Icon: VscVscode,
   },
   {
     title: "Postman",
-    level: "80%",
+    level: "85%",
     Icon: SiPostman,
   },
   {
     title: "Git",
-    level: "90%",
+    level: "93%",
     Icon: FaGitAlt,
   },
   {
     title: "Github",
-    level: "90%",
+    level: "93%",
     Icon: FaSquareGithub,
   },
   {
     title: "Figma",
-    level: "70%",
+    level: "75%",
     Icon: CgFigma,
   },
   {
@@ -151,6 +164,21 @@ export const tools: ISkill[] = [
     title: "Framer Motion",
     level: "75%",
     Icon: FiFramer,
+  },
+  {
+    title: "API",
+    level: "85%",
+    Icon: AiOutlineApi,
+  },
+  {
+    title: "MongoDB",
+    level: "89%",
+    Icon: SiMongodb,
+  },
+  {
+    title: "mySQL",
+    level: "85%",
+    Icon: SiMysql,
   },
 ];
 
@@ -348,6 +376,18 @@ export const projects: IProject[] = [
     category: ["nextJs", "javascript"],
     key_techs: ["NextJs", "JavaScript", "TailwindCss", "GemniAI"],
   },
+  {
+    id: 18,
+    username: "ATS Powered",
+    title: "Web tracking ats powered ai",
+    description:
+      "A project developed with NextJs, TailwindCss, and TypeScript. this project is a tracking application that is very simple and easy to use.",
+    image_path: "/images/projects/18.png",
+    deployed_url: "https://ats-powered-ai.vercel.app/",
+    github_url: "https://github.com/fmpangestu/ats-powered-ai.git",
+    category: ["react", "javascript"],
+    key_techs: ["ReactJs", "JavaScript", "TailwindCss", "Claude-Sonnet"],
+  },
 ];
 
 export const sertificats: ISertificate[] = [
@@ -385,5 +425,12 @@ export const sertificats: ISertificate[] = [
     description: "Certificate of completion from Dicoding Indonesia",
     image_path: "/images/sertificate/7.png",
     sertificate_url: "https://www.dicoding.com/certificates/MRZM85L0KZYQ",
+  },
+  {
+    id: 6,
+    title: "Sertikasi Pemrograman Python",
+    description: "Certificate of completion from Dicoding Indonesia",
+    image_path: "/images/sertificate/8.jpg",
+    sertificate_url: "https://www.dicoding.com/certificates/L4PQE9L0QPO1",
   },
 ];
