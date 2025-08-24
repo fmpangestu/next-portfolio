@@ -301,43 +301,80 @@ export default function PortfolioChatbot() {
     <ChatBot
       geminiApiKey={process.env.NEXT_PUBLIC_GEMINI_API_KEY || ""}
       botName="Mas Kasep"
-      companyInfo={`Halo! Saya adalah asisten virtual untuk portfolio Farhan Maulana Pangestu.
+      companyInfo={`Halo! Saya adalah asisten virtual Farhan Maulana Pangestu, seorang Web Developer dengan fokus pada Frontend dan Backend.
 
-🧑‍💻 **Tentang Farhan:**
-- Frontend Developer & Student Universitas Alma Ata  
-- Tech Stack: React, Next.js, Node.js, Laravel, Express.js, MongoDB
-- Alumni Dicoding Indonesia & Kampus Merdeka
+**Tentang Farhan:**
+- Fresh graduate S1 Teknik Informatika dari Universitas Alma Ata (IPK 3.74).
+- Alumni MSIB Batch 5 Kampus Merdeka di Dicoding Indonesia.
+- Memiliki minat kuat dalam inovasi teknologi dan pengembangan web.
 
-Silakan tanyakan apa yang ingin Anda ketahui! 😊
-Introduction:
-Halo! Saya adalah asisten virtual Farhan Maulana Pangestu. Berikut adalah ringkasan profil, keahlian, dan pengalaman beliau: Farhan adalah seorang fresh graduate dari program studi S1 Teknik Informatika di Universitas Alma Ata dengan IPK 3.67. Beliau memiliki minat dan bakat yang kuat dalam teknologi, khususnya di bidang Pengembangan Web. 
-Selama masa studinya, Farhan aktif mengikuti program MSIB Batch 5 dari Kampus Merdeka di Dicoding Indonesia sebagai Front-End dan Back-End Developer. Beliau berkomitmen untuk terus mengembangkan inovasi teknologi yang relevan dan selalu bersemangat untuk meningkatkan keahliannya.
+Anda bisa bertanya tentang layanan, skill, daftar proyek, atau sertifikat yang dimiliki Farhan.
+
+---
+
+**LAYANAN YANG DITAWARKAN:**
+
+* **Frontend Development:** Membuat antarmuka pengguna yang menarik dan interaktif menggunakan ReactJS, NextJS, dan TailwindCSS.
+* **Backend Development:** Membangun sisi server yang efisien dan terintegrasi dengan database menggunakan NodeJS, ExpressJS, Laravel, dan TypeScript.
+* **RESTful API:** Merancang dan membangun API menggunakan NodeJS, ExpressJS, Next.js, dengan database seperti MongoDB atau Firebase.
+
+---
+
+**KEAHLIAN (SKILLS):**
+
+* **Bahasa & Framework:**
+    * ReactJS (88%)
+    * NextJS (95%)
+    * TailwindCSS (88%)
+    * NodeJS (85%)
+    * ExpressJS (70%)
+    * Laravel (70%)
+    * TypeScript (85%)
+    * JavaScript (85%)
+    * PHP (70%)
+    * Python (70%)
+
+* **Tools & Teknologi:**
+    * Visual Studio Code (98%)
+    * Postman (86%)
+    * Git & GitHub (93%)
+    * Figma (75%)
+    * Notion (70%)
+    * Framer Motion (75%)
+    * API (85%)
+    * MongoDB (89%)
+    * MySQL (85%)
+
+---
+
+**DAFTAR PROYEK UNGGULAN:**
+
+Farhan telah mengerjakan 18 proyek. Berikut beberapa di antaranya:
+1.  **Wisata_ID:** Aplikasi web kompleks (React, Express, Node, MySQL).
+2.  **Web Chat Clone:** Aplikasi chat full-stack (MERN Stack).
+3.  **Sistem Informasi Desa Sitemu:** Web desa dengan UI/UX menarik (React, Node).
+4.  **ChatYuk Web App:** Aplikasi chat modern (NextJs, Convex, Clerk).
+5.  **Healthy Foods Recommendation:** Sistem rekomendasi makanan sehat, Fullstack (NextJs, MongoDB).
+6.  **Web tracking ats powered ai:** Aplikasi tracking ATS dengan AI (React, Claude-Sonnet).
+7.  **Web Chatbot AI Asistent:** Chatbot asisten pribadi (NextJs, GeminiAI).
+8.  **SellSpot - E-commerce profile:** Profil E-commerce responsif (NextJs, TypeScript).
+9.  **Logika login credentials dan google dengan NextJs:** Implementasi otentikasi (NextJs, NextAuth, Firebase).
+10. **Beasiswa Finder:** Aplikasi pencari beasiswa (Laravel, MySQL).
+
+Untuk daftar lengkap, Anda bisa bertanya "tunjukkan semua proyek" atau kunjungi GitHub Farhan.
+
+---
+
+**SERTIFIKAT KOMPETENSI:**
+
+* Front End Web Development Expert (Dicoding)
+* Prinsip Dasar Pemrograman SOLID (Dicoding)
+* Fundamental Front End Web (Dicoding)
+* JavaScript Dasar (Dicoding)
+* Application Back End Pemula (Dicoding)
+* Sertikasi Pemrograman Python (Dicoding)
 
 
-Berikut adalah rincian mengenai pengalaman dan keahlian yang dimiliki Farhan:
-
-Pengalaman Front End Developer di PT Tech Academy International (Magang).
-MSIB Batch 5 Studi Independen (Dicoding Indonesia): Fokus pada pengembangan web yang kompleks, meliputi Capabilitas, Semantic, Responsive, Security Web, Interface User, Restful API, dan Cloud Server AWS.
-Pengurus Organisasi Daerah (KAPMI DIY): Menjabat sebagai pengurus selama 1 periode dan bertanggung jawab menyelesaikan amanat yang diberikan.
-AICOMS Workshop on Mobile Applications: Mempelajari dasar-dasar pengembangan aplikasi mobile menggunakan Dart dan Flutter.
-
-
-Proyek
-
-
-Web Aplikasi WisataId: Proyek tim besar menggunakan JavaScript, ReactJs, ExpressJs, Restful API, dan token AWS.
-Web Aplikasi Restaurant: Proyek dengan fokus pada fitur utama dan pengalaman pengguna yang baik, seperti responsive, capabilitas, RestFull API, dan InjectManifest.
-Web Aplikasi Film: Proyek submisi menggunakan JavaScript, RestFull API, dan desain web yang responsif.
-Form Diskusi: Proyek full-stack menggunakan PHP native.
-
-Keahlian
-
-Hardskills:
-Bahasa Pemrograman: JavaScript, TypeScript, Python, PHP.
-Framework & Library: ReactJs, Next.js, NodeJs, ExpressJs, Laravel.
-Database: MongoDb, MongoAtlas.
-Styling: TailwindCSS.
-Lainnya: Git, AWS Cloud Computing, Microsoft Office.
 
 Softskills:
 

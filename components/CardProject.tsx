@@ -214,7 +214,7 @@ const ProjectCard: FunctionComponent<{
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+          className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 "
           onClick={() => setShowDetail(null)}
         >
           <motion.div
@@ -222,7 +222,7 @@ const ProjectCard: FunctionComponent<{
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.9, opacity: 0 }}
             transition={{ type: "spring", damping: 20, stiffness: 300 }}
-            className="bg-white dark:bg-slate-900 rounded-2xl max-w-4xl w-full max-h-[80vh] overflow-y-scroll md:overflow-hidden"
+            className="bg-white dark:bg-slate-900 rounded-2xl max-w-6xl w-full max-h-[80vh] overflow-y-scroll md:overflow-hidden custom-scrollbar"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="grid md:grid-cols-2 gap-8 p-8">
@@ -270,9 +270,14 @@ const ProjectCard: FunctionComponent<{
                   <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
                     {title}
                   </h2>
-                  <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 text-sm rounded-full">
-                    {category}
-                  </span>
+                  {category.map((m) => (
+                    <span
+                      key={m}
+                      className="px-3 py-1 mx-0.5 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 text-sm rounded-full"
+                    >
+                      {m}
+                    </span>
+                  ))}
                 </div>
 
                 <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
