@@ -26,7 +26,7 @@ const Sidebar = () => {
     <div className="flex-grow relative">
       <Image
         src="/images/sidebarImg/3.jpg"
-        alt="my-foto"
+        alt="my-foto-ku"
         width={1200}
         height={600}
         quality={100}
