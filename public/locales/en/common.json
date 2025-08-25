@@ -1,0 +1,163 @@
+{
+  "about": "About",
+  "projects": "Projects",
+  "resume": "Resume",
+  "certificates": "Certificates",
+  "contact": "Contact",
+  "pricings": "Pricing",
+  "intro": "Hello, I'm Farhan Maulana Pangestu, a Front End Developer, and I'm a Fresh graduate with a Bachelor's degree in Computer Science from Alma Ata University. I'm developer web applications. I have experience with programming languages React, Next.js, Node.js, Laravel, Express.js, and MongoDB. I'm currently looking for a job as a Fullstack Developer.",
+  "skillAndExperience": "Skill and Experience",
+  "frontendDevelopment": "Frontend Development",
+  "backendDevelopment": "Backend Development",
+  "webDeveloper": "Web Developer",
+  "downloadResume": "Download Resume",
+  "englishLanguage": "English",
+  "indonesianLanguage": "Indonesian",
+  "location": "Indramayu, Indonesia",
+  "emailMe": "Email Me",
+  "darkMode": "Dark Mode",
+  "lightMode": "Light Mode",
+  "resumeDescription": "Summary of my experience, education, and technical skills.",
+  "education": "Education",
+  "informaticsEngineering": "Informatics Engineering",
+  "universityName": "Universitas Alma Ata",
+  "educationDescription": "Informatics Engineering study program at Alma Ata University who has a special interest and talent in technology, especially in Web Development.",
+  "experience": "Experience",
+  "internship": "Internship",
+  "internshipCompany": "PT. TECH ACADEMY INTERNATIONAL",
+  "internshipDescription": "I interned as a Front End Engineering Website Developer",
+  "languagesAndFrameworks": "Languages and Frameworks",
+  "toolsAndSoftware": "Tools & Software",
+  "services": {
+    "FrontendDevelopmentTitle": "Frontend Development",
+    "FrontendDevelopmentDescription": "I can create attractive user interface and client user websites using <b>ReactJS</b>, <b>NextJS</b>, and <b>TailwindCSS</b>.",
+
+    "BackEndDevelopmentTitle": "BackEnd Development",
+    "BackEndDevelopmentDescription": "I can create efficient server side and database driven websites using <b>NodeJS</b>, <b>ExpressJS</b>, <b>Laravel</b>, and <b>TypeScript</b>. which can be integrated with Front Development.",
+
+    "ResfulAPITitle": "Resful API",
+    "ResfulAPIDescription": "I can create Restful API using <b>NodeJS</b>, <b>ExpressJS</b>, <b>NextJs</b>, and <b>MongoDB</b>, <b>Firebase</b>.",
+
+    "DicodingIndonesiaTitle": "Dicoding Indonesia",
+    "DicodingIndonesiaDescription": "Is one of the MSIB KAMPUS MERDEKA BATCH 5 platforms, following the program (MBKM) at that time, for 6 months (1 semester), I got a lot of experience.",
+
+    "IDCampIndosatTitle": "IDCamp Indosat",
+    "IDCampIndosatDescription": "Is one of the platforms that I signed up for when I joined the Dicoding Indonesia MBKM, because of several mentors at Dicoding.",
+
+    "KampusMerdekaTitle": "Kampus Merdeka",
+    "KampusMerdekaDescription": "It is a platform that provides innovations created by the Ministry of Education and Culture in order to produce graduates who are ready to face social, cultural changes."
+  },
+  "projectLabels": {
+    "github": "GitHub",
+    "live": "Live",
+    "soon": "Soon",
+    "liveDemo": "Live Demo",
+    "comingSoon": "Coming Soon",
+    "technologiesUsed": "Technologies Used",
+    "designReference": "Design Reference"
+  },
+  "projects1": {
+    "project1": {
+      "title": "JoRan (Jokes Random)",
+      "description": "A project using react js logic tools"
+    },
+    "project2": {
+      "title": "Todo App",
+      "description": "A React project with Todo Logic"
+    },
+    "project3": {
+      "title": "Note Apps",
+      "description": "A React project with Note Logic"
+    },
+    "project4": {
+      "title": "Wisata_ID",
+      "description": "A project team with react, express.js, which is very complex"
+    },
+    "project5": {
+      "title": "Yok Ngopi",
+      "description": "A project that uses vanilla language, html css javascript"
+    },
+    "project6": {
+      "title": "Web Chat Clone",
+      "description": "A project developed with MERN Stack, which can be used online"
+    },
+    "project7": {
+      "title": "Beasiswa Finder",
+      "description": "A project developed with laravel and also with MySQL. as project team"
+    },
+    "project8": {
+      "title": "Sistem Informasi Desa Sitemu",
+      "description": "A project developed with an attractive UI/UX, and also react js development, and some features that are prioritized."
+    }
+  },
+  "certificatesPage": {
+    "title": "Certificates & Licenses",
+    "description": "View my collection of certificates and licenses."
+  },
+  "certificateLabels": {
+    "visitCertificate": "Visit Certificate"
+  },
+  "certificates1": {
+    "certificate1": {
+      "title": "Front End Web Development Expert",
+      "description": "Certificate of completion from Dicoding Indonesia"
+    },
+    "certificate2": {
+      "title": "Principles of SOLID Programming",
+      "description": "Certificate of completion from Dicoding Indonesia"
+    },
+    "certificate3": {
+      "title": "Fundamental Front End Web",
+      "description": "Certificate of completion from Dicoding Indonesia"
+    },
+    "certificate4": {
+      "title": "JavaScript Basics",
+      "description": "Certificate of completion from Dicoding Indonesia"
+    },
+    "certificate5": {
+      "title": "Application Back End Beginner",
+      "description": "Certificate of completion from Dicoding Indonesia"
+    },
+    "certificate6": {
+      "title": "Python Programming Certification",
+      "description": "Certificate of completion from Dicoding Indonesia"
+    }
+  },
+  "pricing": {
+    "title": "Affordable Pricing",
+    "subtitle": "Choose a package that fits your business needs",
+    "currency": "IDR",
+    "popular": "Popular",
+    "specialRate": "SPECIAL RATE",
+    "upTo": "Up to",
+    "featuresTitle": "What You Get:",
+    "selectButton": "Select Plan",
+    "whatsappMessage": "Hello, I'm interested in the \"{{planName}}\" service that I saw in your portfolio. Could you please provide more information?",
+    "plans": {
+      "companyProfile": {
+        "name": "Company Profile",
+        "description": "Solution for your company profile to make it more attractive"
+      },
+      "onlineStore": {
+        "name": "Online Store",
+        "description": "Makes it easier for sellers and buyers to transact in your store"
+      },
+      "customWeb": {
+        "name": "Custom Web Application",
+        "description": "We can build the application you want"
+      }
+    },
+    "features": {
+      "webDesign": "Custom Web Design",
+      "customDomain": "Custom Domain",
+      "storage": "{{size}} SSD Storage",
+      "storageCustom": "Storage Based On Needs",
+      "featuresCustom": "Features Based On Needs",
+      "unlimitedBandwidth": "Unlimited Bandwidth",
+      "ssl": "SSL Certificate",
+      "maintenance": "Free System Maintenance",
+      "backup": "Data Backup",
+      "dashboard": "Admin Dashboard Page"
+    }
+  }
+}

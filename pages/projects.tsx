@@ -7,14 +7,19 @@ import { motion } from "framer-motion";
 import { fadeUp, routeAnimate, stagger } from "@/animate";
 import { NextSeo } from "next-seo"; // <-- Tambahkan ini
 import React from "react"; // <-- Tambahkan ini
+import { useTranslation } from "next-i18next"; // Tambahkan import ini
+import { serverSideTranslations } from "next-i18next/serverSideTranslations"; // Tambahkan import ini
+import { GetStaticProps } from "next"; // Tambahkan import ini
 
 export default function ProjectPage() {
+  const { t } = useTranslation("common"); // Tambahkan hook useTranslation
   const [projects, setProjects] = useState(projectsData);
   const [active, setActive] = useState("all");
   const [showDetail, setShowDetail] = useState<number | null>(null);
-  const pageTitle = "My Projects";
-  const pageDescription =
-    "Jelajahi berbagai proyek yang telah saya kembangkan.";
+
+  // Gunakan terjemahan untuk title dan description
+  const pageTitle = t("projectsPage.title");
+  const pageDescription = t("projectsPage.description");
 
   const handlerFilterCategory = (category: Category | "all") => {
     if (category === "all") {
@@ -77,3 +82,10 @@ export default function ProjectPage() {
     </React.Fragment> // <-- Tutup Fragment
   );
 }
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale || "en", ["common"])),
+    },
+  };
+};

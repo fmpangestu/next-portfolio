@@ -1,8 +1,5 @@
 "use client";
 import Image from "next/image";
-// import Link from "next/link";
-// import { FaLinkedin } from "react-icons/fa";
-// import { FaSquareGithub, FaSquareInstagram } from "react-icons/fa6";
 import { IoIosSend } from "react-icons/io";
 import { MdOutlineLocationOn } from "react-icons/md";
 import { RiDownloadCloudFill } from "react-icons/ri";
@@ -11,7 +8,9 @@ import { useEffect, useState } from "react";
 import { AiOutlineClose } from "react-icons/ai";
 import { motion } from "framer-motion";
 import { fadeUp, stagger } from "@/animate";
+import { useTranslation } from "next-i18next";
 const Sidebar = () => {
+  const { t } = useTranslation("common");
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   const [showDetail, setShowDetail] = useState(false);
@@ -26,13 +25,13 @@ const Sidebar = () => {
   return (
     <div className="flex-grow relative">
       <Image
-        src="/images/sidebarImg/2.jpg"
+        src="/images/sidebarImg/3.jpg"
         alt="my-foto"
-        width={200}
-        height={200}
+        width={1200}
+        height={600}
         quality={100}
-        // layout="intrinsic"
-        className="object-cover w-48 h-48 mx-auto rounded-full  lg:w-32 lg:h-32 "
+        className="object-cover object-center w-full h-72 sm:h-[26rem] lg:h-48 mx-auto rounded-lg shadow-md"
+        priority
       />
       <h3 className="my-4 flex items-center justify-center text-3xl font-medium tracking-wider font-kaushan text-sky-700 dark:text-sky-600">
         <span className="text-blues dark:text-slate-200">Farhan </span>
@@ -46,15 +45,15 @@ const Sidebar = () => {
           className="ml-3 mt-1 w-6.5 h-6.5"
         />
       </h3>
-      <p className="w-full py-2 my-3 bg-gray-200 dark:bg-slate-950 rounded-lg">
-        Web Developer
+      <p className="w-full py-2 my-3 bg-gray-200 dark:bg-slate-950 rounded-lg sm:text-sm">
+        {t("webDeveloper")}
       </p>
       <button
         onClick={() => setShowDetail(true)}
-        className="flex items-center dark:bg-slate-950 justify-center w-full gap-1 py-2 my-3 transition duration-500 ease-in-out bg-gray-200 rounded-lg hover:bg-gradient-to-r hover:from-blues hover:to-sky-600 hover:text-white"
+        className="flex items-center dark:bg-slate-950 justify-center w-full gap-1 py-2 my-3 transition duration-500 ease-in-out bg-gray-200 rounded-lg hover:bg-gradient-to-r hover:from-blues hover:to-sky-600 hover:text-white sm:text-sm"
       >
         <RiDownloadCloudFill />
-        Download Resume
+        {t("downloadResume")}
       </button>
       {showDetail && (
         <motion.div
@@ -63,7 +62,7 @@ const Sidebar = () => {
           animate="animate"
           className="grid gap-y-2 p-2 items-center justify-center absolute top-1/2 lg:top-1/3 z-10 left-0 w-full h-auto text-slate-900 dark:text-white  bg-white dark:bg-gradient-to-r dark:from-slate-950 dark:to-slate-800 rounded-xl "
         >
-          <motion.p variants={fadeUp}>Download Resume</motion.p>
+          <motion.p variants={fadeUp}>{t("downloadResume")}</motion.p>
           <div className="flex gap-2">
             <motion.a
               variants={fadeUp}
@@ -71,7 +70,7 @@ const Sidebar = () => {
               href="/resume_en.pdf"
               download="resume_en.pdf"
             >
-              Bahasa Inggris
+              {t("englishLanguage")}
             </motion.a>
             <motion.a
               variants={fadeUp}
@@ -79,7 +78,7 @@ const Sidebar = () => {
               href="/resume_id.pdf"
               download="resume_id.pdf"
             >
-              Bahasa Indonesia
+              {t("indonesianLanguage")}
             </motion.a>
           </div>
           <motion.button
@@ -192,25 +191,25 @@ const Sidebar = () => {
         className="flex-grow py-4 my-5 bg-gray-200 dark:bg-slate-950 "
         style={{ marginLeft: "-1rem", marginRight: "-1rem" }}
       >
-        <div className="flex items-center justify-center space-x-2">
+        <div className="flex items-center justify-center space-x-2 sm:text-sm">
           <MdOutlineLocationOn />
-          <span>Indramayu,Indonesia</span>
+          <span>{t("location")}</span>
         </div>
-        <p className="my-2">farhanmaulana1710@gmail.com</p>
+        <p className="my-1">farhanmaulana1710@gmail.com</p>
       </div>
       <div className="flex flex-col items-center justify-center">
         <button
           onClick={() => window.open("mailto:farhanmaulana1710@gmail.com")}
-          className="flex items-center md:text-[1rem] justify-center w-8/12 gap-2 px-5 py-2 my-2 font-semibold transition duration-500 ease-in-out border rounded-full text-sky-700 focus:outline-none border-sky-700 hover:bg-gradient-to-r from-blues to-sky-600 hover:text-white hover:border-white dark:border-slate-200 dark:text-slate-200"
+          className="flex items-center md:text-sm justify-center w-8/12 gap-2 px-5 py-1 my-1 font-semibold transition-all duration-1000 ease-in-out border rounded-lg text-sky-700 focus:outline-none border-sky-700 hover:bg-gradient-to-r from-blues to-sky-600 hover:text-white hover:border-white dark:border-slate-200 dark:text-slate-200"
         >
           <IoIosSend />
-          Email Me
+          {t("emailMe")}
         </button>
         <button
           onClick={changeTheme}
-          className="w-8/12 px-5 py-2 my-2 font-semibold text-white text-transform: capitalize rounded-full focus:outline-none bg-gradient-to-r from-blues to-sky-600"
+          className="w-8/12 px-5 py-1 my-1 md:text-sm font-semibold text-white text-transform: capitalize rounded-lg focus:outline-none bg-gradient-to-r from-blues to-sky-600"
         >
-          {theme === "light" ? "dark" : "light"} Mode
+          {theme === "light" ? t("darkMode") : t("lightMode")}
         </button>
       </div>
     </div>

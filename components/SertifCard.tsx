@@ -6,6 +6,7 @@ import { AiOutlineClose } from "react-icons/ai";
 import { LuLink } from "react-icons/lu";
 import { motion } from "framer-motion";
 import { fadeUp, stagger } from "@/animate";
+import { useTranslation } from "next-i18next"; // Tambahkan import ini
 
 const SertifCard: FunctionComponent<{
   sertif: ISertificate;
@@ -16,7 +17,15 @@ const SertifCard: FunctionComponent<{
   showDetail,
   setShowDetail,
 }) => {
+  const { t } = useTranslation("common"); // Tambahkan hook useTranslation
   const [mounted, setMounted] = useState(false);
+
+  // Dapatkan terjemahan untuk judul dan deskripsi
+  const translatedTitle = t(`certificates1.certificate${id}.title`, title);
+  const translatedDescription = t(
+    `certificates1.certificate${id}.description`,
+    description
+  );
 
   useEffect(() => {
     setMounted(true);
@@ -27,7 +36,7 @@ const SertifCard: FunctionComponent<{
     <div className="w-full items-center justify-center">
       <Image
         src={image_path}
-        alt={title}
+        alt={translatedTitle}
         width={500}
         height={500}
         layout="responsive"
@@ -39,24 +48,24 @@ const SertifCard: FunctionComponent<{
           variants={stagger}
           initial="initial"
           animate="animate"
-          className="grid md:grid-cols-2 p-3 md:p-10  fixed top-1/4 lg:top-1/4  left-0 mx-3 sm:mx-10 lg:mx-48 2xl:mx-[28rem] z-10   h-auto gap-x-5 text-slate-900 dark:text-white bg-white dark:bg-gradient-to-r dark:from-slate-950 dark:to-slate-800 rounded-xl shadow-custom-light dark:shadow-custom-dark"
+          className="grid md:grid-cols-2 p-3 md:p-10 fixed top-1/4 lg:top-1/4 left-0 mx-3 sm:mx-10 lg:mx-48 2xl:mx-[28rem] z-10 h-auto gap-x-5 text-slate-900 dark:text-white bg-white dark:bg-gradient-to-r dark:from-slate-950 dark:to-slate-800 rounded-xl shadow-custom-light dark:shadow-custom-dark"
         >
           <motion.div variants={fadeUp} className="">
             <Image
               src={image_path}
-              alt={title}
+              alt={translatedTitle}
               width={500}
               height={500}
               layout="responsive"
               className="cursor-pointer rounded-xl border-4 border-sky-950 dark:border-slate-100"
             />
           </motion.div>
-          <div className=" flex flex-col gap-3">
+          <div className="flex flex-col gap-3">
             <motion.h2 variants={fadeUp} className="font-semibold text-xl">
-              {title}
+              {translatedTitle}
             </motion.h2>
             <motion.h5 variants={fadeUp} className="text-sm">
-              {description}
+              {translatedDescription}
             </motion.h5>
             <motion.div variants={fadeUp} className="flex gap-3">
               <a
@@ -65,7 +74,7 @@ const SertifCard: FunctionComponent<{
                 target="blank"
               >
                 <LuLink />
-                <span>Visit Sertificate</span>
+                <span>{t("certificateLabels.visitCertificate")}</span>
               </a>
             </motion.div>
           </div>

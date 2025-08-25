@@ -1,16 +1,19 @@
+/* eslint-disable react/no-unescaped-entities */
 import { fadeUp, routeAnimate } from "@/animate";
 import Bar from "@/components/Bar";
 import { languages, tools } from "@/data";
 import { motion } from "framer-motion";
 import { NextSeo } from "next-seo"; // <-- Tambahkan ini
 import React from "react"; // <-- Tambahkan ini
-/* eslint-disable react/no-unescaped-entities */
+import { useTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations"; // Tambahkan import ini
+import { GetStaticProps } from "next"; // Tambahkan import ini
 
 export default function ResumePage() {
+  const { t } = useTranslation("common");
   const varianst = fadeUp;
-  const pageTitle = "Resume";
-  const pageDescription =
-    "Ringkasan pengalaman, pendidikan, dan keahlian teknis saya.";
+  const pageTitle = t("resume");
+  const pageDescription = t("resumeDescription");
 
   return (
     <React.Fragment>
@@ -39,16 +42,12 @@ export default function ResumePage() {
             animate="animate"
             className=""
           >
-            <h1 className="font-semibold">Education</h1>
-            <h3 className="font-semibold">Informatics Engineering</h3>
+            <h1 className="font-semibold">{t("education")}</h1>
+            <h3 className="font-semibold">{t("informaticsEngineering")}</h3>
             <h4 className="font-semibold">
-              Universitas Alma ata (2021 - Present)
+              {t("universityName")} (2021 - 2025)
             </h4>
-            <p className="text-[.8rem]">
-              Informatics Engineering study program at Alma Ata University who
-              has a special interest and talent in technology, especially in Web
-              Development.
-            </p>
+            <p className="text-[.8rem]">{t("educationDescription")}</p>
           </motion.div>
           <motion.div
             variants={varianst}
@@ -56,18 +55,18 @@ export default function ResumePage() {
             animate="animate"
             className=""
           >
-            <h1 className="font-semibold">Experience</h1>
-            <h3 className="font-semibold">Internship</h3>
+            <h1 className="font-semibold">{t("experience")}</h1>
+            <h3 className="font-semibold">{t("internship")}</h3>
             <h4 className="text-[.8rem] font-semibold">
-              PT. TECH ACADEMY INTERNATIONAL (2024 - 2025)
+              {t("internshipCompany")} (2024 - 2025)
             </h4>
-            <p>I interned as a Front End Engineering Website Developer </p>
+            <p>{t("internshipDescription")}</p>
           </motion.div>
         </div>
         <div className="grid gap-6 md:grid-cols-2">
           <div>
             <h6 className="my-3 text-xl font-bold tracking-wide">
-              Languages and Frameworks
+              {t("languagesAndFrameworks")}
             </h6>
             <div className="my-2">
               {languages.map((language) => (
@@ -77,7 +76,7 @@ export default function ResumePage() {
           </div>
           <div>
             <h6 className="my-3 text-xl font-bold tracking-wide">
-              Tools & Software
+              {t("toolsAndSoftware")}
             </h6>
             <div className="my-2 ">
               {tools.map((language) => (
@@ -90,3 +89,11 @@ export default function ResumePage() {
     </React.Fragment> // <-- Tutup Fragment
   );
 }
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale || "en", ["common"])),
+    },
+  };
+};
