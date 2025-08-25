@@ -7,8 +7,8 @@ import { AiOutlineClose } from "react-icons/ai";
 import { FaSquareGithub } from "react-icons/fa6";
 import { LuLink, LuEye } from "react-icons/lu";
 import { motion } from "framer-motion";
-import { fadeUp, stagger } from "@/animate";
 import { FaLink } from "react-icons/fa";
+import { useTranslation } from "next-i18next"; // Tambahkan import ini
 
 const ProjectCard: FunctionComponent<{
   project: IProject;
@@ -30,8 +30,16 @@ const ProjectCard: FunctionComponent<{
   showDetail,
   setShowDetail,
 }) => {
+  const { t } = useTranslation("common"); // Tambahkan hook untuk terjemahan
   const [mounted, setMounted] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
+
+  // Dapatkan terjemahan untuk judul dan deskripsi
+  const translatedTitle = t(`projects1.project${id}.title`, title);
+  const translatedDescription = t(
+    `projects1.project${id}.description`,
+    description
+  );
 
   useEffect(() => {
     setMounted(true);
@@ -53,7 +61,7 @@ const ProjectCard: FunctionComponent<{
         {/* Image */}
         <Image
           src={image_path}
-          alt={title}
+          alt={translatedTitle}
           fill
           className="object-cover transition-transform duration-700 group-hover:scale-110 overflow-hidden"
         />
@@ -109,21 +117,6 @@ const ProjectCard: FunctionComponent<{
               <LuEye className="w-4 h-4 relative z-10" />
             </div>
           </motion.div>
-
-          {/* Title */}
-          {/* <motion.h3
-            className="text-xs font-bold text-center mb-1"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{
-              opacity: isHovered ? 1 : 0,
-              y: isHovered ? 0 : 20,
-            }}
-            transition={{ duration: 0.4, delay: 0.2 }}
-          >
-            {title}
-          </motion.h3> */}
-
-          {/* Description */}
           <motion.p
             className="text-xs text-center text-gray-200 mb-2 max-w-xs leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
@@ -133,7 +126,7 @@ const ProjectCard: FunctionComponent<{
             }}
             transition={{ duration: 0.4, delay: 0.3 }}
           >
-            {description}
+            {translatedDescription}
           </motion.p>
 
           {/* Quick Action Buttons */}
@@ -155,7 +148,9 @@ const ProjectCard: FunctionComponent<{
               whileTap={{ scale: 0.95 }}
             >
               <FaSquareGithub className="w-4 h-4" />
-              <span className="text-sm font-medium">GitHub</span>
+              <span className="text-sm font-medium">
+                {t("projectLabels.github")}
+              </span>
             </motion.a>
 
             {deployed_url ? (
@@ -168,44 +163,19 @@ const ProjectCard: FunctionComponent<{
                 whileTap={{ scale: 0.95 }}
               >
                 <LuLink className="w-4 h-4" />
-                <span className="text-sm font-medium">Live</span>
+                <span className="text-sm font-medium">
+                  {t("projectLabels.live")}
+                </span>
               </motion.a>
             ) : (
               <div className="flex items-center gap-2 px-1 py-0.5 bg-gray-500/50 backdrop-blur-md rounded-lg border border-gray-400/30 opacity-60">
                 <LuLink className="w-4 h-4" />
-                <span className="text-sm font-medium">Soon</span>
+                <span className="text-sm font-medium">
+                  {t("projectLabels.soon")}
+                </span>
               </div>
             )}
           </motion.div>
-
-          {/* Tech Stack Preview */}
-          {/* <motion.div
-            className="flex gap-2 mt-4"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{
-              opacity: isHovered ? 1 : 0,
-              y: isHovered ? 0 : 20,
-            }}
-            transition={{ duration: 0.4, delay: 0.5 }}
-          >
-            {key_techs.slice(0, 3).map((tech, index) => (
-              <motion.span
-                key={tech}
-                className="px-1 py-0.5 bg-white/20 backdrop-blur-md text-xs rounded-md border border-white/20"
-                initial={{ opacity: 0, scale: 0 }}
-                animate={{
-                  opacity: isHovered ? 1 : 0,
-                  scale: isHovered ? 1 : 0,
-                }}
-                transition={{
-                  duration: 0.3,
-                  delay: 0.6 + index * 0.1,
-                }}
-              >
-                {tech}
-              </motion.span>
-            ))}
-          </motion.div> */}
         </motion.div>
       </motion.div>
 
@@ -231,7 +201,7 @@ const ProjectCard: FunctionComponent<{
                 <div className="relative h-80 rounded-xl overflow-hidden">
                   <Image
                     src={image_path}
-                    alt={title}
+                    alt={translatedTitle}
                     fill
                     className="object-fill"
                   />
@@ -244,7 +214,7 @@ const ProjectCard: FunctionComponent<{
                     target="_blank"
                   >
                     <FaSquareGithub />
-                    <span>GitHub</span>
+                    <span>{t("projectLabels.github")}</span>
                   </a>
                   {deployed_url ? (
                     <a
@@ -253,12 +223,12 @@ const ProjectCard: FunctionComponent<{
                       target="_blank"
                     >
                       <LuLink />
-                      <span>Live Demo</span>
+                      <span>{t("projectLabels.liveDemo")}</span>
                     </a>
                   ) : (
                     <div className="flex items-center justify-center gap-2 bg-gray-400 dark:bg-slate-600 text-gray-200 px-4 py-2 rounded-lg flex-1 opacity-60">
                       <LuLink />
-                      <span>Coming Soon</span>
+                      <span>{t("projectLabels.comingSoon")}</span>
                     </div>
                   )}
                 </div>
@@ -268,7 +238,7 @@ const ProjectCard: FunctionComponent<{
               <div className="space-y-6">
                 <div>
                   <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
-                    {title}
+                    {translatedTitle}
                   </h2>
                   {category.map((m) => (
                     <span
@@ -281,12 +251,12 @@ const ProjectCard: FunctionComponent<{
                 </div>
 
                 <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                  {description}
+                  {translatedDescription}
                 </p>
 
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
-                    Technologies Used
+                    {t("projectLabels.technologiesUsed")}
                   </h3>
                   <div className="flex flex-wrap gap-2">
                     {key_techs.map((tech) => (
@@ -309,7 +279,7 @@ const ProjectCard: FunctionComponent<{
                       title="Design Reference"
                     >
                       <FaLink />
-                      Design Reference
+                      {t("projectLabels.designReference")}
                     </a>
                   </div>
                 )}

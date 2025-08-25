@@ -3,19 +3,22 @@ import SertifCard from "@/components/SertifCard";
 import { sertificats } from "@/data";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { NextSeo } from "next-seo"; // <-- Tambahkan ini
-import React from "react"; // <-- Tambahkan ini
+import { NextSeo } from "next-seo";
+import React from "react";
+import { useTranslation } from "next-i18next"; // Tambahkan import ini
+import { serverSideTranslations } from "next-i18next/serverSideTranslations"; // Tambahkan import ini
+import { GetStaticProps } from "next"; // Tambahkan import ini
 
 const SertificatePage = () => {
+  const { t } = useTranslation("common"); // Tambahkan hook useTranslation
   const [showDetail, setShowDetail] = useState<number | null>(null);
-  const pageTitle = "Certificates & Licenses";
-  const pageDescription =
-    "Lihat koleksi sertifikat dan lisensi yang saya miliki.";
+
+  // Gunakan terjemahan untuk title dan description
+  const pageTitle = t("certificatesPage.title");
+  const pageDescription = t("certificatesPage.description");
 
   return (
     <React.Fragment>
-      {" "}
-      {/* <-- Bungkus dengan Fragment */}
       <NextSeo
         title={pageTitle}
         description={pageDescription}
@@ -29,10 +32,10 @@ const SertificatePage = () => {
         initial="initial"
         animate="animate"
         exit="exit"
-        className="px-5 py-2 overflow-y-scroll custom-scrollbar "
+        className="px-5 py-2 overflow-y-scroll custom-scrollbar"
         style={{ height: "65vh" }}
       >
-        <h1>{pageTitle}</h1> {/* <-- Gunakan variabel judul */}
+        <h1>{pageTitle}</h1>
         <motion.div
           variants={stagger}
           initial="initial"
@@ -54,7 +57,17 @@ const SertificatePage = () => {
           ))}
         </motion.div>
       </motion.div>
-    </React.Fragment> // <-- Tutup Fragment
+    </React.Fragment>
   );
 };
+
+// Tambahkan ini - SANGAT PENTING untuk i18n
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale || "en", ["common"])),
+    },
+  };
+};
+
 export default SertificatePage;

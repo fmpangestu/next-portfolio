@@ -4,6 +4,7 @@ import { usePathname } from "next/navigation";
 import { FunctionComponent, useEffect, useState } from "react";
 import { GrCertificate } from "react-icons/gr";
 import PricingModal from "./PricingModal";
+import { useTranslation } from "next-i18next";
 
 const NavItem: FunctionComponent<{
   activeItem?: string;
@@ -24,7 +25,9 @@ const NavItem: FunctionComponent<{
   isModal,
   onClick,
 }) => {
+  const { t } = useTranslation("common");
   // Jika isModal true, render sebagai button dengan corner brackets di luar
+  const translatedName = t(name.toLowerCase());
   if (isModal) {
     return (
       <div className="relative p-0.5">
@@ -41,7 +44,7 @@ const NavItem: FunctionComponent<{
         >
           <div className="flex items-center justify-start whitespace-nowrap">
             {icons && <span className="flex-shrink-0 min-w-4">{icons}</span>}
-            <span className="ml-2">{name}</span>
+            <span className="ml-2">{t("pricings")}</span>
           </div>
         </button>
       </div>
@@ -57,7 +60,7 @@ const NavItem: FunctionComponent<{
           onClick={() => setActiveItem(name)}
           className="transition duration-300 text-sm sm:text-base hover:text-sky-950 dark:hover:text-slate-200"
         >
-          {name}
+          {translatedName}
         </span>
       </p>
     </Link>
@@ -65,10 +68,11 @@ const NavItem: FunctionComponent<{
 };
 
 const Navbar = () => {
+  const { t } = useTranslation("common");
   const [activeItem, setActiveItem] = useState("");
   const [isPricingModalOpen, setIsPricingModalOpen] = useState(false);
   const pathname = usePathname();
-
+  const translatedActiveItem = activeItem ? t(activeItem.toLowerCase()) : "";
   useEffect(() => {
     if (pathname === "/") setActiveItem("About");
     if (pathname === "/projects") setActiveItem("Projects");
@@ -91,7 +95,7 @@ const Navbar = () => {
             onClick={() => setIsPricingModalOpen(true)}
           />
           <span className="text-sm sm:text-xl font-bold border-b-2 dark:text-slate-200 text-sky-950 border-sky-600">
-            {activeItem}
+            {translatedActiveItem}
           </span>
         </div>
 

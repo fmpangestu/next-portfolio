@@ -1,0 +1,163 @@
+{
+  "about": "Tentang",
+  "projects": "Proyek",
+  "resume": "Resume",
+  "certificates": "Sertifikat",
+  "contact": "Kontak",
+  "pricings": "Harga",
+  "intro": "Halo, Saya Farhan Maulana Pangestu, seorang Front End Developer, dan Saya Fresh graduate S1 Teknik Informatika dari Universitas Alma Ata. Saya pengembang aplikasi web. Saya memiliki pengalaman dengan bahasa pemrograman React, Next.js, Node.js, Laravel, Express.js, dan MongoDB. Saat ini saya sedang mencari pekerjaan sebagai Fullstack Developer.",
+  "skillAndExperience": "Keahlian dan Pengalaman",
+  "frontendDevelopment": "Pengembangan Frontend",
+  "backendDevelopment": "Pengembangan Backend",
+  "webDeveloper": "Pengembang Web",
+  "downloadResume": "Unduh Resume",
+  "englishLanguage": "Inggris",
+  "indonesianLanguage": "Indonesia",
+  "location": "Indramayu, Indonesia",
+  "emailMe": "Email Saya",
+  "darkMode": "Mode Gelap",
+  "lightMode": "Mode Cerah",
+  "resumeDescription": "Ringkasan pengalaman, pendidikan, dan keahlian teknis saya.",
+  "education": "Pendidikan",
+  "informaticsEngineering": "Teknik Informatika",
+  "universityName": "Universitas Alma Ata",
+  "educationDescription": "Program studi Teknik Informatika di Universitas Alma Ata yang memiliki minat dan bakat khusus dalam teknologi, terutama dalam Pengembangan Web.",
+  "experience": "Pengalaman",
+  "internship": "Magang",
+  "internshipCompany": "PT. TECH ACADEMY INTERNATIONAL",
+  "internshipDescription": "Saya magang sebagai Front End Engineering Website Developer",
+  "languagesAndFrameworks": "Bahasa Pemrograman dan Framework",
+  "toolsAndSoftware": "Alat & Perangkat Lunak",
+  "services": {
+    "FrontendDevelopmentTitle": "Pengembangan Frontend",
+    "FrontendDevelopmentDescription": "Saya dapat membuat antarmuka pengguna yang menarik dan situs web pengguna klien menggunakan <b>ReactJS</b>, <b>NextJS</b>, dan <b>TailwindCSS</b>.",
+
+    "BackEndDevelopmentTitle": "Pengembangan Backend",
+    "BackEndDevelopmentDescription": "Saya dapat membuat situs web sisi server yang efisien dan berbasis database menggunakan <b>NodeJS</b>, <b>ExpressJS</b>, <b>Laravel</b>, dan <b>TypeScript</b>. yang dapat diintegrasikan dengan Pengembangan Frontend.",
+
+    "ResfulAPITitle": "Resful API",
+    "ResfulAPIDescription": "Saya dapat membuat Restful API menggunakan <b>NodeJS</b>, <b>ExpressJS</b>, <b>NextJs</b>, dan <b>MongoDB</b>, <b>Firebase</b>.",
+
+    "DicodingIndonesiaTitle": "Dicoding Indonesia",
+    "DicodingIndonesiaDescription": "Merupakan salah satu platform MSIB KAMPUS MERDEKA BATCH 5, mengikuti program (MBKM) pada saat itu, selama 6 bulan (1 semester), saya mendapatkan banyak pengalaman.",
+
+    "IDCampIndosatTitle": "IDCamp Indosat",
+    "IDCampIndosatDescription": "Merupakan salah satu platform yang saya daftarkan saat bergabung dengan Dicoding Indonesia MBKM, karena beberapa mentor di Dicoding.",
+
+    "KampusMerdekaTitle": "Kampus Merdeka",
+    "KampusMerdekaDescription": "Merupakan platform yang menyediakan inovasi yang dibuat oleh Kementerian Pendidikan dan Kebudayaan untuk menghasilkan lulusan yang siap menghadapi perubahan sosial, budaya."
+  },
+  "projectLabels": {
+    "github": "GitHub",
+    "live": "Langsung",
+    "soon": "Segera",
+    "liveDemo": "Demo Langsung",
+    "comingSoon": "Segera Hadir",
+    "technologiesUsed": "Teknologi yang Digunakan",
+    "designReference": "Referensi Desain"
+  },
+  "projects1": {
+    "project1": {
+      "title": "JoRan (Jokes Random)",
+      "description": "Proyek menggunakan alat logika react js"
+    },
+    "project2": {
+      "title": "Aplikasi Todo",
+      "description": "Proyek React dengan Logika Todo"
+    },
+    "project3": {
+      "title": "Aplikasi Catatan",
+      "description": "Proyek React dengan Logika Catatan"
+    },
+    "project4": {
+      "title": "Wisata_ID",
+      "description": "Proyek tim dengan react, express.js, yang sangat kompleks"
+    },
+    "project5": {
+      "title": "Yok Ngopi",
+      "description": "Proyek yang menggunakan bahasa vanilla, html css javascript"
+    },
+    "project6": {
+      "title": "Klon Web Chat",
+      "description": "Proyek yang dikembangkan dengan MERN Stack, yang dapat digunakan secara online"
+    },
+    "project7": {
+      "title": "Pencari Beasiswa",
+      "description": "Proyek yang dikembangkan dengan laravel dan juga dengan MySQL. sebagai proyek tim"
+    },
+    "project8": {
+      "title": "Sistem Informasi Desa Sitemu",
+      "description": "Proyek yang dikembangkan dengan UI/UX yang menarik, dan juga pengembangan react js, dan beberapa fitur yang diprioritaskan."
+    }
+  },
+  "certificatesPage": {
+    "title": "Sertifikat & Lisensi",
+    "description": "Lihat koleksi sertifikat dan lisensi yang saya miliki."
+  },
+  "certificateLabels": {
+    "visitCertificate": "Lihat Sertifikat"
+  },
+  "certificates1": {
+    "certificate1": {
+      "title": "Expert Pengembangan Web Front End",
+      "description": "Sertifikat penyelesaian dari Dicoding Indonesia"
+    },
+    "certificate2": {
+      "title": "Prinsip Dasar Pemrograman SOLID",
+      "description": "Sertifikat penyelesaian dari Dicoding Indonesia"
+    },
+    "certificate3": {
+      "title": "Fundamental Front End Web",
+      "description": "Sertifikat penyelesaian dari Dicoding Indonesia"
+    },
+    "certificate4": {
+      "title": "JavaScript Dasar",
+      "description": "Sertifikat penyelesaian dari Dicoding Indonesia"
+    },
+    "certificate5": {
+      "title": "Aplikasi Back End Pemula",
+      "description": "Sertifikat penyelesaian dari Dicoding Indonesia"
+    },
+    "certificate6": {
+      "title": "Sertifikasi Pemrograman Python",
+      "description": "Sertifikat penyelesaian dari Dicoding Indonesia"
+    }
+  },
+  "pricing": {
+    "title": "Harga Terjangkau",
+    "subtitle": "Pilih paket yang sesuai dengan kebutuhan bisnis Anda",
+    "currency": "IDR",
+    "popular": "Populer",
+    "specialRate": "TARIF SPESIAL",
+    "upTo": "Sampai dengan",
+    "featuresTitle": "Yang Kamu Dapatkan:",
+    "selectButton": "Pilih Layanan",
+    "whatsappMessage": "Halo, saya tertarik dengan layanan \"{{planName}}\" yang saya lihat di portofolio Anda. Bisa tolong berikan info lebih lanjut?",
+    "plans": {
+      "companyProfile": {
+        "name": "Profil Perusahaan",
+        "description": "Solusi untuk profil perusahaan kamu agar terlihat lebih menarik"
+      },
+      "onlineStore": {
+        "name": "Toko Online",
+        "description": "Mempermudah seller dan buyer untuk bertransaksi di toko kamu"
+      },
+      "customWeb": {
+        "name": "Aplikasi Web Kustom",
+        "description": "Kita bisa membuat aplikasi yang kamu inginkan"
+      }
+    },
+    "features": {
+      "webDesign": "Desain Web Kustom",
+      "customDomain": "Domain Kustom",
+      "storage": "Penyimpanan {{size}} SSD",
+      "storageCustom": "Penyimpanan Sesuai Kebutuhan",
+      "featuresCustom": "Fitur Sesuai Kebutuhan",
+      "unlimitedBandwidth": "Bandwidth Tidak Terbatas",
+      "ssl": "Sertifikat SSL",
+      "maintenance": "Pemeliharaan Sistem Gratis",
+      "backup": "Cadangan Data",
+      "dashboard": "Halaman Dashboard Admin"
+    }
+  }
+}

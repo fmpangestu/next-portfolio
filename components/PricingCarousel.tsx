@@ -2,18 +2,18 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, Check, Zap } from "lucide-react";
-
+import { useTranslation } from "next-i18next";
 const PricingCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [mounted, setMounted] = useState(false);
-
+  const { t } = useTranslation("common");
   useEffect(() => {
     setMounted(true);
   }, []);
   const myWhatsAppNumber = "6283199412171"; // <-- GANTI DENGAN NOMOR ANDA!
 
   const handleSelectPlan = (planName: string) => {
-    const message = `Halo, saya tertarik dengan layanan "${planName}" yang saya lihat di portofolio Anda. Bisa tolong berikan info lebih lanjut?`;
+    const message = t("pricing.whatsappMessage", { planName });
 
     // encodeURIComponent memastikan karakter seperti spasi, dll., aman untuk URL
     const encodedMessage = encodeURIComponent(message);
@@ -25,48 +25,55 @@ const PricingCarousel = () => {
   };
   const pricingPlans = [
     {
-      name: "Company Profile",
-      description:
-        "Solusi untuk profil perusahaan kamu agar terlihat lebih menarik",
+      name: t("pricing.plans.companyProfile.name"),
+      description: t("pricing.plans.companyProfile.description"),
       price: "3jt",
-      label: "SPECIAL RATE",
+      label: t("pricing.specialRate"),
       popular: false,
       features: [
-        "Web Design Custom",
-        "Domain Custom",
-        "Storage 500MB SSD",
-        "Unlimited Bandwidth",
-        "SSL Certificate",
+        t("pricing.features.webDesign"),
+        t("pricing.features.customDomain"),
+        t("pricing.features.storage", { size: "500MB" }),
+        t("pricing.features.unlimitedBandwidth"),
+        t("pricing.features.ssl"),
+        t("pricing.features.maintenance"),
+        t("pricing.features.backup"),
       ],
     },
     {
-      name: "Online Store",
-      description:
-        "Mempermudah seller dan buyer untuk bertransaksi di toko kamu",
+      name: t("pricing.plans.onlineStore.name"),
+      description: t("pricing.plans.onlineStore.description"),
       price: "5jt",
-      label: "SPECIAL RATE",
+      label: t("pricing.specialRate"),
       popular: true,
       features: [
-        "Dashboard Admin Page",
-        "Web Design Custom",
-        "Domain Custom",
-        "Storage 1GB SSD",
-        "Unlimited Bandwidth",
+        t("pricing.features.dashboard"),
+        t("pricing.features.webDesign"),
+        t("pricing.features.customDomain"),
+        t("pricing.features.storage", { size: "1GB" }),
+        t("pricing.features.unlimitedBandwidth"),
+        t("pricing.features.ssl"),
+        t("pricing.features.maintenance"),
+        t("pricing.features.backup"),
       ],
     },
     {
-      name: "Custom Web Aplikasi",
-      description: "Kita bisa membuat aplikasi yang kamu ingin kan",
+      name: t("pricing.plans.customWeb.name"),
+      description: t("pricing.plans.customWeb.description"),
       price: "15jt",
-      label: "Up to",
+      label: t("pricing.upTo"),
       popular: false,
       isHighlight: true,
       features: [
-        "Dashboard Admin Page",
-        "Storage Based On Needs",
-        "Feature Based On Needs",
-        "Web Design Custom",
-        "Domain Custom",
+        t("pricing.features.dashboard"),
+        t("pricing.features.storageCustom"),
+        t("pricing.features.featuresCustom"),
+        t("pricing.features.webDesign"),
+        t("pricing.features.customDomain"),
+        t("pricing.features.unlimitedBandwidth"),
+        t("pricing.features.ssl"),
+        t("pricing.features.maintenance"),
+        t("pricing.features.backup"),
       ],
     },
   ];
@@ -90,10 +97,10 @@ const PricingCarousel = () => {
       {/* Header */}
       <div className="text-center py-4 px-4 border-b border-gray-100 dark:border-slate-700">
         <h3 className="text-lg font-bold text-gray-900 dark:text-white">
-          Harga Terjangkau
+          {t("pricing.title")}
         </h3>
         <p className="text-xs text-gray-600 dark:text-gray-400">
-          Pilih paket yang sesuai dengan kebutuhan bisnis Anda
+          {t("pricing.subtitle")}
         </p>
       </div>
 
@@ -116,7 +123,7 @@ const PricingCarousel = () => {
             {currentPlan.popular && (
               <div className="text-center mb-3">
                 <span className="bg-yellow-400 text-yellow-800 px-3 py-1 rounded-full text-xs font-medium">
-                  Popular
+                  {t("pricing.popular")}
                 </span>
               </div>
             )}
@@ -155,7 +162,7 @@ const PricingCarousel = () => {
                       : "text-gray-600 dark:text-gray-400"
                   }`}
                 >
-                  IDR
+                  {t("pricing.currency")}
                 </span>
                 <span
                   className={`text-2xl font-bold ${
@@ -188,7 +195,7 @@ const PricingCarousel = () => {
                     : "text-gray-700 dark:text-gray-300"
                 }`}
               >
-                Yang Kamu Dapatkan:
+                {t("pricing.featuresTitle")}
               </h5>
               <ul className="space-y-1">
                 {currentPlan.features.map((feature, index) => (
@@ -223,7 +230,7 @@ const PricingCarousel = () => {
                   : "bg-blue-600 text-white hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600"
               }`}
             >
-              Pilih Layanan →
+              {t("pricing.selectButton")} →
             </button>
           </motion.div>
         </AnimatePresence>
