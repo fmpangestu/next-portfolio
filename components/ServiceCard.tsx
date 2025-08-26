@@ -1,14 +1,13 @@
 import { IService } from "@/type";
 import Image from "next/image";
 import { FunctionComponent } from "react";
-import { useTranslation } from "next-i18next"; // Tambahkan ini
+import { useTranslation } from "next-i18next";
 
 const ServiceCard: FunctionComponent<{ service: IService }> = ({
   service: { Icon, description, title, image },
 }) => {
-  const { t } = useTranslation("common"); // Tambahkan hook useTranslation
+  const { t } = useTranslation("common");
 
-  // Fungsi untuk menerjemahkan judul dan deskripsi
   const translatedTitle = t(
     `services.${title.replace(/\s+/g, "")}Title`,
     title
@@ -25,20 +24,41 @@ const ServiceCard: FunctionComponent<{ service: IService }> = ({
   };
 
   return (
-    <div className="flex items-center p-2 space-x-4 text-black dark:text-slate-200">
-      {Icon && <Icon className="w-20 h-20 text-sky-700 dark:text-sky-400" />}
-      {image && (
-        <Image
-          src={image}
-          alt=""
-          className="object-cover w-12 h-12 rounded-lg "
-          width={500}
-          height={500}
+    <div className="group relative rounded-xl bg-white dark:bg-slate-800 p-6 shadow-md hover:shadow-lg transition-all duration-300 border border-slate-100 dark:border-slate-700 overflow-hidden h-full flex flex-col">
+      {/* Background accent */}
+      <div className="absolute inset-0 bg-gradient-to-br from-sky-50 to-transparent dark:from-sky-900/20 dark:to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+      {/* Icon/Image in better position */}
+      <div className="absolute -right-6 -top-6">
+        {Icon && (
+          <div className="relative">
+            <div className="absolute inset-0 bg-sky-500/10 dark:bg-sky-400/10 rounded-full blur-2xl"></div>
+            <Icon className="w-24 h-24 text-sky-500/20 dark:text-sky-400/20" />
+          </div>
+        )}
+        {image && (
+          <div className="relative">
+            <div className="absolute inset-0 bg-sky-500/10 dark:bg-sky-400/10 rounded-full blur-2xl"></div>
+            <Image
+              src={image}
+              alt=""
+              className="object-cover w-24 h-24 rounded-full opacity-20"
+              width={500}
+              height={500}
+            />
+          </div>
+        )}
+      </div>
+
+      {/* Content */}
+      <div className="relative z-10 flex-1">
+        <h4 className="font-bold text-lg mb-2 text-slate-800 dark:text-slate-200">
+          {translatedTitle}
+        </h4>
+        <p
+          className="text-sm text-slate-600 dark:text-slate-300"
+          dangerouslySetInnerHTML={markupHtml()}
         />
-      )}
-      <div className="">
-        <h4 className="font-bold">{translatedTitle}</h4>
-        <p className="text-sm" dangerouslySetInnerHTML={markupHtml()} />
       </div>
     </div>
   );
