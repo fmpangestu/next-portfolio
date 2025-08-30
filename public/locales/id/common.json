@@ -88,6 +88,50 @@
     "project8": {
       "title": "Sistem Informasi Desa Sitemu",
       "description": "Proyek yang dikembangkan dengan UI/UX yang menarik, dan juga pengembangan react js, dan beberapa fitur yang diprioritaskan."
+    },
+    "project9": {
+      "title": "Portfolio Saya",
+      "description": "Proyek portfolio pribadi yang dikembangkan dengan ReactJS dan TailwindCSS."
+    },
+    "project10": {
+      "title": "Tabungan Sederhana",
+      "description": "Proyek yang dikembangkan dengan logika typescript."
+    },
+    "project11": {
+      "title": "Logika login credentials dan google dengan NextJs",
+      "description": "Proyek yang dikembangkan dengan NextJs dan NextAuth."
+    },
+    "project12": {
+      "title": "Slicing One Page menggunakan HTML & CSS",
+      "description": "Proyek aplikasi desktop yang dikembangkan dengan HTML dan CSS."
+    },
+    "project13": {
+      "title": "SellSpot - Profil e-commerce",
+      "description": "Proyek profil web responsif e-commerce dengan Nextjs dan Tailwindcss."
+    },
+    "project14": {
+      "title": "Aplikasi Web ChatYuk",
+      "description": "Proyek yang dikembangkan dengan NextJs, Convex, Clerk, dan TypeScript. Proyek ini adalah aplikasi chat yang sangat sederhana dan mudah digunakan."
+    },
+    "project15": {
+      "title": "Aplikasi web - kuis matematika untuk anak-anak",
+      "description": "Proyek yang dikembangkan dengan NextJs, TailwindCss, dan TypeScript. Proyek ini adalah aplikasi kuis yang sangat sederhana dan mudah digunakan untuk anak-anak."
+    },
+    "project16": {
+      "title": "Aplikasi web - Sistem Rekomendasi Makanan Sehat",
+      "description": "Proyek yang dikembangkan dengan NextJs, TailwindCss, dan TypeScript. Proyek ini adalah sistem rekomendasi makanan sehat yang sangat sederhana dan mudah digunakan."
+    },
+    "project17": {
+      "title": "Chatbot AI Asisten Web",
+      "description": "Proyek yang dikembangkan dengan NextJs, TailwindCss, dan TypeScript. Proyek ini adalah aplikasi chatbot yang sangat sederhana dan mudah digunakan."
+    },
+    "project18": {
+      "title": "Web pelacakan dengan teknologi AI",
+      "description": "Proyek yang dikembangkan dengan NextJs, TailwindCss, dan TypeScript. Proyek ini adalah aplikasi pelacakan yang sangat sederhana dan mudah digunakan."
+    },
+    "project19": {
+      "title": "Platform Web LabSkill",
+      "description": "Proyek magang yang dikembangkan PT Tech Academy International dengan NextJs, TailwindCss, TypeScript, dan Golang. Proyek ini adalah aplikasi LabSkill yang sangat sederhana dan mudah digunakan."
     }
   },
   "certificatesPage": {

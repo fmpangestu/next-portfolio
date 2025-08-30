@@ -388,6 +388,18 @@ export const projects: IProject[] = [
     category: ["react", "javascript"],
     key_techs: ["ReactJs", "JavaScript", "TailwindCss", "Claude-Sonnet"],
   },
+  {
+    id: 19,
+    username: "LabSkill",
+    title: "Web LabSkill Platform",
+    description:
+      "A project internship developed PT Tech Academy International with NextJs, TailwindCss, and TypeScript, Golang. this project is a LabSkill application that is very simple and easy to use.",
+    image_path: "/images/projects/19.png",
+    deployed_url: "https://labskill.co/",
+    github_url: "https://github.com/fmpangestu",
+    category: ["nextJs", "typescript"],
+    key_techs: ["NextJs", "TailwindCss", "TypeScript", "Golang"],
+  },
 ];
 
 export const sertificats: ISertificate[] = [

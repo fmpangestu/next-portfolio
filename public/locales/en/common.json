@@ -88,6 +88,50 @@
     "project8": {
       "title": "Sistem Informasi Desa Sitemu",
       "description": "A project developed with an attractive UI/UX, and also react js development, and some features that are prioritized."
+    },
+    "project9": {
+      "title": "My Portfolio",
+      "description": "A personal portfolio project developed with ReactJS and TailwindCSS."
+    },
+    "project10": {
+      "title": "Tabungan Sederhana",
+      "description": "A project developed with typescript logic."
+    },
+    "project11": {
+      "title": "Logika login credentials dan google dengan NextJs",
+      "description": "A project developed with NextJs and NextAuth."
+    },
+    "project12": {
+      "title": "Slicing One Page using HTML & CSS",
+      "description": "A project desktop app developed with HTML and CSS."
+    },
+    "project13": {
+      "title": "SellSpot - E-commerce profile",
+      "description": "A project responsive web profile ecommerce with Nextjs and Tailwindcss."
+    },
+    "project14": {
+      "title": "ChatYuk Web App",
+      "description": "A project developed with NextJs, Convex, Clerk, and TypeScript. This project is a chat application that is very simple and easy to use."
+    },
+    "project15": {
+      "title": "Web app - quiz mathematics for kids",
+      "description": "A project developed with NextJs, TailwindCss, and TypeScript. This project is a quiz application that is very simple and easy to use, for kids."
+    },
+    "project16": {
+      "title": "Web app - Healthy Foods Recommendation System",
+      "description": "A project developed with NextJs, TailwindCss, and TypeScript. This project is a healthy foods recommendation system that is very simple and easy to use."
+    },
+    "project17": {
+      "title": "Web Chatbot AI Assistant",
+      "description": "A project developed with NextJs, TailwindCss, and TypeScript. This project is a chatbot application that is very simple and easy to use."
+    },
+    "project18": {
+      "title": "Web tracking ats powered ai",
+      "description": "A project developed with NextJs, TailwindCss, and TypeScript. This project is a tracking application that is very simple and easy to use."
+    },
+    "project19": {
+      "title": "Web LabSkill Platform",
+      "description": "A project internship developed with PT Tech Academy International using NextJs, TailwindCss, TypeScript, and Golang. This project is a LabSkill application that is very simple and easy to use."
     }
   },
   "certificatesPage": {
