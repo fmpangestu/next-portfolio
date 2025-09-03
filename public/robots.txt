@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Gunakan domain utama untuk sitemap
+Sitemap: https://farhndv.me/sitemap.xml
+
+# Tambahkan ini jika Anda ingin
+Host: https://farhndv.me
