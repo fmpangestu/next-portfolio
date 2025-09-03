@@ -10,7 +10,7 @@ import PricingCarousel from "@/components/PricingCarousel";
 import PortfolioChatbot from "@/components/PortfolioChatbot";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { appWithTranslation } from "next-i18next";
-// Konfigurasi SEO Default (Anda bisa pindahkan ke file terpisah jika mau)
+import { siteConfig } from "../config/site";
 const DEFAULT_SEO = {
   title: "Farhan Maulana Pangestu",
   titleTemplate: "%s | Portfolio", // %s akan diganti dengan title dari halaman
@@ -19,24 +19,24 @@ const DEFAULT_SEO = {
   openGraph: {
     type: "website",
     locale: "id_ID", // Anda bisa ganti ke en_US atau lainnya
-    url: "https://www.farhndv.me", // <-- GANTI DENGAN URL ANDA
-    site_name: "Farhan Maulana Pangestu Portfolio",
+    url: siteConfig.url,
+    site_name: siteConfig.name,
     // Anda bisa menambahkan gambar default di sini
     images: [
       {
-        url: "https://farhndv.me/boy.png",
+        url: `${siteConfig.url}/boy.png`,
         width: 800,
         height: 600,
-        alt: "Farhan Maulana Pangestu Portfolio",
+        alt: siteConfig.name,
       },
     ],
   },
-  // Anda bisa menambahkan twitter card di sini jika perlu
-  // twitter: {
-  //   handle: '@yourtwitterhandle',
-  //   site: '@yourtwitterhandle',
-  //   cardType: 'summary_large_image',
-  // },
+  additionalMetaTags: [
+    {
+      name: "google-site-verification",
+      content: "971209fbcb21c753",
+    },
+  ],
 };
 
 function App({ Component, pageProps, router }: AppProps) {
