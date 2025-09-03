@@ -132,6 +132,10 @@
     "project19": {
       "title": "Platform Web LabSkill",
       "description": "Proyek magang yang dikembangkan PT Tech Academy International dengan NextJs, TailwindCss, TypeScript, dan Golang. Proyek ini adalah aplikasi LabSkill yang sangat sederhana dan mudah digunakan."
+    },
+    "project20": {
+      "title": "Profil Perusahaan",
+      "description": "Proyek yang dikembangkan dengan NextJs, TailwindCss, dan TypeScript. Proyek ini adalah situs web profil perusahaan untuk memamerkan karya perusahaan."
     }
   },
   "certificatesPage": {

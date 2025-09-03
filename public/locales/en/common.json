@@ -132,6 +132,10 @@
     "project19": {
       "title": "Web LabSkill Platform",
       "description": "A project internship developed with PT Tech Academy International using NextJs, TailwindCss, TypeScript, and Golang. This project is a LabSkill application that is very simple and easy to use."
+    },
+    "project20": {
+      "title": "Company Profile",
+      "description": "A project developed with NextJs, TailwindCss, and TypeScript. This project is a company profile website to showcase the company's work."
     }
   },
   "certificatesPage": {

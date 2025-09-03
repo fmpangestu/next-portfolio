@@ -9,10 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@farhanmp/ai-chatbot-widget": "^1.0.5",
+    "@farhanmp/ai-chatbot-widget": "^1.0.7",
     "framer-motion": "^11.11.10",
     "i18next": "^25.4.2",
-    "lucide-react": "^0.539.0",
+    "lucide-react": "0.542.0",
     "next": "15.0.1",
     "next-i18next": "^15.4.2",
     "next-seo": "^6.8.0",
