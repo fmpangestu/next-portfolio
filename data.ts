@@ -400,6 +400,18 @@ export const projects: IProject[] = [
     category: ["nextJs", "typescript"],
     key_techs: ["NextJs", "TailwindCss", "TypeScript", "Golang"],
   },
+  {
+    id: 20,
+    username: "Company Profile",
+    title: "Company Profile - PT RAM x YPP BANGSA",
+    description:
+      "A project developed with NextJs, TailwindCss, and TypeScript. this project is a personal company profile website to showcase my work.",
+    image_path: "/images/projects/20.png",
+    deployed_url: "https://yppbangsa.org",
+    github_url: "https://github.com/fmpangestu",
+    category: ["nextJs", "typescript"],
+    key_techs: ["NextJs", "TailwindCss", "TypeScript"],
+  },
 ];
 
 export const sertificats: ISertificate[] = [
