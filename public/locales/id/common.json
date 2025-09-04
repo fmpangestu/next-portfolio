@@ -136,6 +136,10 @@
     "project20": {
       "title": "Profil Perusahaan",
       "description": "Proyek yang dikembangkan dengan NextJs, TailwindCss, dan TypeScript. Proyek ini adalah situs web profil perusahaan untuk memamerkan karya perusahaan."
+    },
+    "project21": {
+      "title": "Admin Dashboard - Desa Sitemu",
+      "description": "Proyek yang dikembangkan dengan ReactJs, TailwindCss, TypeScript dan Beckend dengan Express JS dan PostgreSQL. proyek ini adalah situs web dasbor admin pribadi untuk mengelola data desa sitemu."
     }
   },
   "certificatesPage": {

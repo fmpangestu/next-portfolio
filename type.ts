@@ -46,4 +46,6 @@ export type Category =
   | "typescript"
   | "html"
   | "javascript"
+  | "tailwind"
+  | "postgresql"
   | "css";
