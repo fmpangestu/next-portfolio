@@ -136,6 +136,10 @@
     "project20": {
       "title": "Company Profile",
       "description": "A project developed with NextJs, TailwindCss, and TypeScript. This project is a company profile website to showcase the company's work."
+    },
+    "project21": {
+      "title": "Admin Dashboard - Desa Sitemu",
+      "description": "A project developed with ReactJs, TailwindCss, TypeScript and Beckend with Express JS and PostgreSQL. this project is a personal admin dashboard website to manage desa sitemu data."
     }
   },
   "certificatesPage": {

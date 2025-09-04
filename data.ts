@@ -412,6 +412,23 @@ export const projects: IProject[] = [
     category: ["nextJs", "typescript"],
     key_techs: ["NextJs", "TailwindCss", "TypeScript"],
   },
+  {
+    id: 21,
+    username: "Admin Sitemu",
+    title: "Admin Dashboard - Desa Sitemu",
+    description:
+      "A project developed with ReactJs, TailwindCss, TypeScript and Beckend with Express JS and PostgreSQL. this project is a personal admin dashboard website to manage desa sitemu data.",
+    image_path: "/images/projects/21.png",
+    github_url: "https://github.com/fmpangestu",
+    category: ["react", "node", "express", "postgresql"],
+    key_techs: [
+      "ReactJs",
+      "TailwindCss",
+      "TypeScript",
+      "ExpressJS",
+      "PostgreSQL",
+    ],
+  },
 ];
 
 export const sertificats: ISertificate[] = [
