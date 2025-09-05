@@ -14,7 +14,29 @@ export default function Document() {
         />
         <link rel="canonical" href={siteConfig.url} />
         <meta name="google-site-verification" content="971209fbcb21c753" />
-        <link rel="icon" href="/boy.png" />
+
+        {/* Favicon tags - Menggunakan boy.png yang sudah ada */}
+        {/* Favicon tags - Menggunakan file favicon khusus */}
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link
+          rel="icon"
+          href="/favicon-16x16.png"
+          type="image/png"
+          sizes="16x16"
+        />
+        <link
+          rel="icon"
+          href="/favicon-32x32.png"
+          type="image/png"
+          sizes="32x32"
+        />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+
+        {/* Meta tags untuk search engine dan social media */}
+        <meta property="og:image" content={`${siteConfig.url}/boy.png`} />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:image" content={`${siteConfig.url}/boy.png`} />
       </Head>
       <body className="antialiased bg-neutral-700/20 dark:bg-gradient-to-r from-blues to-slate-100 dark:from-slate-950 dark:to-slate-800 custom-scrollbar">
         <Main />

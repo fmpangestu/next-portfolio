@@ -24,7 +24,7 @@ const DEFAULT_SEO = {
     // Anda bisa menambahkan gambar default di sini
     images: [
       {
-        url: `${siteConfig.url}/boy.png`,
+        url: `${siteConfig.url}/favicon.ico`,
         width: 800,
         height: 600,
         alt: siteConfig.name,
