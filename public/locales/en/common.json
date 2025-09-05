@@ -146,6 +146,10 @@
     "title": "Certificates & Licenses",
     "description": "View my collection of certificates and licenses."
   },
+  "projectsPage": {
+    "title": "My Projects",
+    "description": "Here are some of the projects I've worked on, showcasing my skills and experience in web development."
+  },
   "certificateLabels": {
     "visitCertificate": "Visit Certificate"
   },

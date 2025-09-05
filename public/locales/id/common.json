@@ -146,6 +146,10 @@
     "title": "Sertifikat & Lisensi",
     "description": "Lihat koleksi sertifikat dan lisensi yang saya miliki."
   },
+  "projectsPage": {
+    "title": "Proyek Saya",
+    "description": "Berikut adalah beberapa proyek yang telah saya kerjakan, yang menunjukkan keterampilan dan pengalaman saya dalam pengembangan web."
+  },
   "certificateLabels": {
     "visitCertificate": "Lihat Sertifikat"
   },
