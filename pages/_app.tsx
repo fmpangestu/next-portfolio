@@ -11,7 +11,9 @@ import PortfolioChatbot from "@/components/PortfolioChatbot";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { appWithTranslation } from "next-i18next";
 import { siteConfig } from "../config/site";
+import { useEffect } from "react";
 const DEFAULT_SEO = {
+  defaultTitleL: "Farhan Maulana Pangestu",
   title: "Farhan Maulana Pangestu",
   titleTemplate: "%s | Portfolio", // %s akan diganti dengan title dari halaman
   description:
@@ -40,6 +42,12 @@ const DEFAULT_SEO = {
 };
 
 function App({ Component, pageProps, router }: AppProps) {
+  useEffect(() => {
+    document.title =
+      router.pathname === "/"
+        ? "Farhan Maulana Pangestu"
+        : `${router.pathname.slice(1)} | Farhan Portfolio`;
+  }, [router.pathname]);
   return (
     <ThemeProvider attribute="class">
       <DefaultSeo {...DEFAULT_SEO} />
