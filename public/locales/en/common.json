@@ -9,7 +9,15 @@
   "skillAndExperience": "Skill and Experience",
   "frontendDevelopment": "Frontend Development",
   "backendDevelopment": "Backend Development",
-  "webDeveloper": "Web Developer",
+  "developerTitles": {
+    "hellos": "Hello 🖐️😉✌️",
+    "frontEnd": "Frontend Developer",
+    "web": "Web Developer",
+    "react": "React.js Developer",
+    "nextjs": "NodeJs Developer",
+    "fullStack": "Fullstack Developer"
+  },
+
   "downloadResume": "Download Resume",
   "englishLanguage": "English",
   "indonesianLanguage": "Indonesian",
