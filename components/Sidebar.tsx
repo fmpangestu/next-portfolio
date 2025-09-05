@@ -9,14 +9,28 @@ import { AiOutlineClose } from "react-icons/ai";
 import { motion } from "framer-motion";
 import { fadeUp, stagger } from "@/animate";
 import { useTranslation } from "next-i18next";
+import Typewriter from "typewriter-effect"; // Import package animasi
+
 const Sidebar = () => {
   const { t } = useTranslation("common");
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   const [showDetail, setShowDetail] = useState(false);
+
+  // Array judul developer dari terjemahan
+  const developerTitles = [
+    t("developerTitles.hellos"),
+    t("developerTitles.frontEnd"),
+    t("developerTitles.web"),
+    t("developerTitles.react"),
+    t("developerTitles.nextjs"),
+    t("developerTitles.fullStack"),
+  ];
+
   const changeTheme = () => {
     setTheme(theme === "light" ? "dark" : "light");
   };
+
   useEffect(() => {
     setMounted(true);
   }, []);
@@ -45,9 +59,20 @@ const Sidebar = () => {
           className="ml-3 mt-1 w-6.5 h-6.5"
         />
       </h3>
-      <p className="w-full py-2 my-3 bg-gray-200 dark:bg-slate-950 rounded-lg sm:text-sm">
-        {t("webDeveloper")}
-      </p>
+      <div className="w-full py-3 my-3 bg-gray-200 dark:bg-slate-950 rounded-lg sm:text-sm min-h-[40px] flex items-center justify-center">
+        <Typewriter
+          options={{
+            strings: developerTitles,
+            autoStart: true,
+            loop: true,
+            delay: 75,
+            deleteSpeed: 50,
+            wrapperClassName:
+              "text-black dark:text-slate-200 font-medium italic",
+            cursorClassName: "text-black dark:text-slate-200 font-medium",
+          }}
+        />
+      </div>
       <button
         onClick={() => setShowDetail(true)}
         className="flex items-center dark:bg-slate-950 justify-center w-full gap-1 py-2 my-3 transition duration-500 ease-in-out bg-gray-200 rounded-lg hover:bg-gradient-to-r hover:from-blues hover:to-sky-600 hover:text-white sm:text-sm"
@@ -90,25 +115,10 @@ const Sidebar = () => {
           </motion.button>
         </motion.div>
       )}
-      {/* //? Social Media */}
-      {/* <div className="flex justify-around w-9/12 mx-auto my-5 md:w-full text-sky-950">
-        <Link
-          href="https://www.linkedin.com/in/farhanmaulanapangestu/"
-          target="blank"
-        >
-          <FaLinkedin size={30} />
-        </Link>
-        <Link href="https://www.instagram.com/farhanbaeee/" target="blank">
-          <FaSquareInstagram size={30} />
-        </Link>
-        <Link href="https://github.com/fmpangestu" target="blank">
-          <FaSquareGithub size={30} />
-        </Link>
-      </div> */}
       <ul className="example-2">
         <li className="icon-content">
           <a
-            href="https://www.linkedin.com/in/farhanmaulanapangestu/"
+            href="https://www.linkedin.com/in/farhan-maulana-pangestu-ba8a3537b/"
             aria-label="LinkedIn"
             data-social="linkedin"
             target="blank"
@@ -192,7 +202,7 @@ const Sidebar = () => {
         style={{ marginLeft: "-1rem", marginRight: "-1rem" }}
       >
         <div className="flex items-center justify-center space-x-2 sm:text-sm">
-          <MdOutlineLocationOn />
+          <MdOutlineLocationOn className="text-blue-600" />
           <span>{t("location")}</span>
         </div>
         <p className="my-1">farhanmaulana1710@gmail.com</p>

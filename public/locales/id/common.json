@@ -9,7 +9,14 @@
   "skillAndExperience": "Keahlian dan Pengalaman",
   "frontendDevelopment": "Pengembangan Frontend",
   "backendDevelopment": "Pengembangan Backend",
-  "webDeveloper": "Pengembang Web",
+  "developerTitles": {
+    "hellos": "Hello 🖐️😉✌️",
+    "frontEnd": "Frontend Developer",
+    "web": "Web Developer",
+    "react": "React.js Developer",
+    "nextjs": "NodeJs Developer",
+    "fullStack": "Fullstack Developer"
+  },
   "downloadResume": "Unduh Resume",
   "englishLanguage": "Inggris",
   "indonesianLanguage": "Indonesia",
