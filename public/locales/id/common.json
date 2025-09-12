@@ -147,6 +147,10 @@
     "project21": {
       "title": "Admin Dashboard - Desa Sitemu",
       "description": "Proyek yang dikembangkan dengan ReactJs, TailwindCss, TypeScript dan Beckend dengan Express JS dan PostgreSQL. proyek ini adalah situs web dasbor admin pribadi untuk mengelola data desa sitemu."
+    },
+    "project22": {
+      "title": "Clustering App - K-Means Algorithm",
+      "description": "Proyek yang dikembangkan dengan Python dan Streamlit, flask untuk Backend. proyek ini adalah kolaborasi dengan yaarnDev sebagai Developer Clustering App menggunakan K-Means Algorithm."
     }
   },
   "certificatesPage": {
