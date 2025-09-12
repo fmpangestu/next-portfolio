@@ -429,6 +429,17 @@ export const projects: IProject[] = [
       "PostgreSQL",
     ],
   },
+  {
+    id: 22,
+    username: "Clustering App",
+    title: "Clustering App - K-Means Algorithm",
+    description: "A project developed with Python and Streamlit, flask for Backend. this project is collaboration with yaarnDev as Developer Clustering App using K-Means Algorithm.",
+    image_path: "/images/projects/22.png",
+    deployed_url: "https://clustering-zsyh.onrender.com",
+    github_url: "https://github.com/fmpangestu/Clustering.git",
+    category: ["python", "flask"],
+    key_techs: ["Python", "Streamlit", "Flask", "Pandas", "NumPy", "Matplotlib"],
+  }
 ];
 
 export const sertificats: ISertificate[] = [

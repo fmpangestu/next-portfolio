@@ -48,4 +48,10 @@ export type Category =
   | "javascript"
   | "tailwind"
   | "postgresql"
-  | "css";
+  | "css"
+  | "python"
+  | "flask"
+  | "django"
+  | "docker"
+  | "aws"
+  | "git";

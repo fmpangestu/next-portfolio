@@ -148,7 +148,12 @@
     "project21": {
       "title": "Admin Dashboard - Desa Sitemu",
       "description": "A project developed with ReactJs, TailwindCss, TypeScript and Beckend with Express JS and PostgreSQL. this project is a personal admin dashboard website to manage desa sitemu data."
+    },
+    "project22": {
+      "title": "Clustering App - K-Means Algorithm",
+      "description": "A project developed with Python and Streamlit, flask for Backend. this project is collaboration with yaarnDev as Developer Clustering App using K-Means Algorithm."
     }
+
   },
   "certificatesPage": {
     "title": "Certificates & Licenses",
