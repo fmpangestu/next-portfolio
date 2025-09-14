@@ -99,7 +99,27 @@ const Navbar = () => {
           </span>
         </div>
 
-        <div className="flex space-x-3 text-[1rem] text-slate-400">
+       <div
+  className="
+    relative flex items-center gap-3 text-[1rem]
+    px-3 py-2 rounded-xl
+    text-slate-900
+    dark:text-slate-400
+    bg-white/10 dark:bg-slate-900/30
+    backdrop-blur-xl backdrop-saturate-150
+    ring-1 ring-white/20 dark:ring-white/10
+    shadow-lg shadow-black/10
+
+    /* fallback kalau browser belum support backdrop-filter */
+    supports-[backdrop-filter:blur(0px)]:bg-white/10
+    supports-[backdrop-filter:blur(0px)]:backdrop-blur-2xl
+
+    /* highlight tipis ala iOS */
+    before:pointer-events-none before:absolute before:inset-0 before:rounded-xl
+    before:bg-gradient-to-b before:from-white/60 before:to-white/5 before:opacity-[0.06]
+  "
+>
+
           <NavItem
             activeItem={activeItem}
             setActiveItem={setActiveItem}
