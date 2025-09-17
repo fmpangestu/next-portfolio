@@ -159,3 +159,7 @@ ul {
 .custom-scrollbar2::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+/* hide scrollbar untuk container horizontal */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
