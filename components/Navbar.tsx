@@ -82,7 +82,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="flex items-center justify-between px-5 py-2 my-2">
+      <div className="flex items-center justify-between px-4 py-2 my-2">
         {/* Pricing sebagai modal button dengan corner brackets */}
         <div className="flex justify-center items-center space-x-4">
           <NavItem
@@ -99,32 +99,31 @@ const Navbar = () => {
           </span>
         </div>
 
-       <div
-  className="
-    relative flex items-center gap-3 text-[1rem]
-    px-3 py-2 rounded-xl
-    text-slate-900
-    dark:text-slate-400
-    bg-white/10 dark:bg-slate-900/30
-    backdrop-blur-xl backdrop-saturate-150
-    ring-1 ring-white/20 dark:ring-white/10
-    shadow-lg shadow-black/10
+        <div
+          className="
+                    relative flex items-center gap-3 text-[5px] md:text-[1rem]
+                   px-1 py-1.5 md:px-3 md:py-2 rounded-md
+                    text-slate-900
+                    dark:text-slate-400
+                    bg-white/10 dark:bg-slate-900/30
+                    backdrop-blur-xl backdrop-saturate-150
+                    ring-1 ring-white/20 dark:ring-white/10
+                    shadow-lg shadow-black/10
 
-    /* fallback kalau browser belum support backdrop-filter */
-    supports-[backdrop-filter:blur(0px)]:bg-white/10
-    supports-[backdrop-filter:blur(0px)]:backdrop-blur-2xl
+                    /* fallback kalau browser belum support backdrop-filter */
+                    supports-[backdrop-filter:blur(0px)]:bg-white/10
+                    supports-[backdrop-filter:blur(0px)]:backdrop-blur-2xl
 
-    /* highlight tipis ala iOS */
-    before:pointer-events-none before:absolute before:inset-0 before:rounded-xl
-    before:bg-gradient-to-b before:from-white/60 before:to-white/5 before:opacity-[0.06]
-  "
->
-
+                    /* highlight tipis ala iOS */
+                    before:pointer-events-none before:absolute before:inset-0 before:rounded-xl
+                    before:bg-gradient-to-b before:from-white/60 before:to-white/5 before:opacity-[0.06]
+                  "
+        >
           <NavItem
             activeItem={activeItem}
             setActiveItem={setActiveItem}
             name="About"
-            icons={<LayoutGrid className="h-3 w-3 sm:w-4 sm:h-4" />}
+            icons={<LayoutGrid className="h-2.5 w-2.5 sm:w-4 sm:h-4" />}
             route="/"
           />
           <NavItem
@@ -132,21 +131,21 @@ const Navbar = () => {
             setActiveItem={setActiveItem}
             name="Projects"
             route="/projects"
-            icons={<CodeXml className="h-3 w-3 sm:w-4 sm:h-4" />}
+            icons={<CodeXml className="h-2.5 w-2.5 sm:w-4 sm:h-4" />}
           />
           <NavItem
             activeItem={activeItem}
             setActiveItem={setActiveItem}
             name="Resume"
             route="/resume"
-            icons={<FileUser className="h-3 w-3 sm:w-4 sm:h-4" />}
+            icons={<FileUser className="h-2.5 w-2.5 sm:w-4 sm:h-4" />}
           />
           <NavItem
             activeItem={activeItem}
             setActiveItem={setActiveItem}
             name="Certificates"
             route="/certificates"
-            icons={<GrCertificate className="h-3 w-3 sm:w-4 sm:h-4" />}
+            icons={<GrCertificate className="h-2.5 w-2.5 sm:w-4 sm:h-4" />}
           />
         </div>
       </div>
