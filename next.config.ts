@@ -13,6 +13,12 @@ const nextConfig: NextConfig = {
         port: "",
         pathname: "/**",
       },
+      {
+        protocol:"https",
+        hostname:"gpduprphatydmxpmvxjh.supabase.co",
+        port:"",
+        pathname:"/storage/v1/object/public/portfolio/**"
+      }
     ],
     dangerouslyAllowSVG: true,
   },
