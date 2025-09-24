@@ -95,3 +95,35 @@ function App({ Component, pageProps, router }: AppProps) {
 }
 
 export default appWithTranslation(App);
+
+
+
+// import { DefaultSeo } from "next-seo";
+// import { useEffect, useState } from "react";
+
+// function MyApp({ Component, pageProps }: any) {
+//   const [seo, setSeo] = useState<any>(null);
+
+//   useEffect(() => {
+//     fetch("/api/settings").then(r => r.json()).then(j => setSeo(j.data?.seo));
+//   }, []);
+
+//   return (
+//     <>
+//       {seo && (
+//         <DefaultSeo
+//           title={seo.defaultTitle}
+//           defaultTitle={seo.defaultTitle}
+//           description={seo.defaultDescription}
+//           openGraph={{
+//             site_name: seo.siteName,
+//             images: seo.ogImage ? [{ url: seo.ogImage }] : [],
+//           }}
+//         />
+//       )}
+//       <Component {...pageProps} />
+//     </>
+//   );
+// }
+
+// export default MyApp;
