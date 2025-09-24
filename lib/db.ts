@@ -12,10 +12,10 @@ export async function dbConnect() {
 
   if (!cached.promise) {
     // bantu cek env benar2 terbaca
-    console.log("[Mongo] connecting to:", URI.split("@")[1]?.split("/")[0], "db:", URI.split("/").pop()?.split("?")[0]);
+    console.log("[Mongo] connecting to:", URI!.split("@")[1]?.split("/")[0], "db:", URI!.split("/").pop()?.split("?")[0]);
 
     cached.promise = mongoose
-      .connect(URI, { serverSelectionTimeoutMS: 8000, tls: true })
+      .connect(URI as string, { serverSelectionTimeoutMS: 8000, tls: true })
       .catch((err) => {
         console.error("[Mongo] connect error:", err?.message || err);
         throw err;

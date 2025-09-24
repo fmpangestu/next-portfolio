@@ -86,9 +86,9 @@ export default function AdminProjects() {
     }
   };
 
-  const handleDelete = async (slug: string) => {
+  const handleDelete = async (id: string) => {
     if (!confirm("Are you sure want to delete this item?")) return;
-    const res = await fetch(`/api/projects/${slug}`, {
+    const res = await fetch(`/api/projects/${id}`, {
       method: "DELETE",
       headers: {
         Authorization: `Bearer ${process.env.NEXT_PUBLIC_ADMIN_TOKEN}`,
@@ -268,7 +268,7 @@ export default function AdminProjects() {
                 </div>
               </div>
                 <div>
-                  <button onClick={() => handleDelete(p.slug)} className="flex justify-center gap-2 px-2 py-2"><Trash className="h-4 w-4"/></button>
+                  <button onClick={() => handleDelete(p.id)} className="flex justify-center gap-2 px-2 py-2"><Trash className="h-4 w-4"/></button>
                 </div>
             </li>
           ))}

@@ -1,10 +1,12 @@
 import { Schema, model, models } from "mongoose";
-const lang = { title: String, description: String };
+// models/Certificate.ts
+const Lang = { title: { type: String, required: true }, description: String };
 
 const CertificateSchema = new Schema({
-  image_path: String,
+  image_path: { type: String, required: true },     // public URL
+  storage_path: { type: String },                    // "portfolio/certificates/xxxx.webp"
   sertificate_url: String,
-  translations: { en: lang, id: lang },
+  translations: { en: Lang, id: Lang },
   published: { type: Boolean, default: true },
 }, { timestamps: true });
 
