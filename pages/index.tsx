@@ -81,3 +81,31 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
     },
   };
 };
+
+
+
+// // pages/index.tsx
+// import { GetStaticProps } from "next";
+// import { getSettings } from "@/lib/public-settings";
+
+// export const getStaticProps: GetStaticProps = async () => {
+//   const settings = await getSettings();
+//   return { props: { settings }, revalidate: 60 }; // cache 60 detik
+// };
+
+// export default function Home({ settings }: { settings: any }) {
+//   const { featureFlags, homeHeroRotatingTitles, profile } = settings;
+
+//   return (
+//     <>
+//       {/* Hero */}
+//       {/* contoh rotating titles: */}
+//       {/* pakai locale user */}
+//       {/* ... */}
+//       {/* Certificates section tampil kalau flag true */}
+//       {featureFlags.showCertificates && <CertificatesSection />}
+//       {featureFlags.showExperiences && <ExperiencesSection />}
+//       {featureFlags.showPricing && <PricingSection />}
+//     </>
+//   );
+// }

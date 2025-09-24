@@ -12,6 +12,9 @@ import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { appWithTranslation } from "next-i18next";
 import { siteConfig } from "../config/site";
 import { useEffect } from "react";
+
+import AdminLayout from "@/components/layouts/AdminLayout";
+
 const DEFAULT_SEO = {
   defaultTitleL: "Farhan Maulana Pangestu",
   title: "Farhan Maulana Pangestu",
@@ -42,35 +45,85 @@ const DEFAULT_SEO = {
 };
 
 function App({ Component, pageProps, router }: AppProps) {
+  const isAdmin = router.pathname.startsWith("/admin");
+
   useEffect(() => {
-    document.title =
-      router.pathname === "/"
-        ? "Farhan Maulana Pangestu"
-        : `${router.pathname.slice(1)} | Farhan Portfolio`;
-  }, [router.pathname]);
+    if (!isAdmin) {
+      document.title =
+        router.pathname === "/"
+          ? "Farhan Maulana Pangestu"
+          : `${router.pathname.slice(1)} | Farhan Portfolio`;
+    }
+  }, [router.pathname, isAdmin]);
+
+  // useEffect(() => {
+  //   document.title =
+  //     router.pathname === "/"
+  //       ? "Farhan Maulana Pangestu"
+  //       : `${router.pathname.slice(1)} | Farhan Portfolio`;
+  // }, [router.pathname]);
   return (
     <ThemeProvider attribute="class">
-      <DefaultSeo {...DEFAULT_SEO} />
-      <div className="relative min-h-screen overflow-x-hidden">
-        <LanguageSwitcher />
-        <div className="grid grid-cols-12 gap-6 px-5 2xl:px-48 my-14 sm:px-20 lg:px-8  lg:my-8">
-          <div className="overflow-hidden col-span-12 p-4 text-center bg-white dark:bg-gradient-to-tr dark:from-slate-950 dark:to-slate-800 lg:col-span-3 rounded-2xl shadow-custom-light dark:shadow-custom-dark">
-            <Sidebar />
+      {!isAdmin && <DefaultSeo {...DEFAULT_SEO} />}
+
+      {isAdmin ? (
+        <AdminLayout>
+          <Component {...pageProps} />
+        </AdminLayout>
+      ) : (
+        <div className="relative min-h-screen overflow-x-hidden">
+          <LanguageSwitcher />
+          <div className="grid grid-cols-12 gap-6 px-5 2xl:px-48 my-14 sm:px-20 lg:px-8  lg:my-8">
+            <div className="overflow-hidden col-span-12 p-4 text-center bg-white dark:bg-gradient-to-tr dark:from-slate-950 dark:to-slate-800 lg:col-span-3 rounded-2xl shadow-custom-light dark:shadow-custom-dark">
+              <Sidebar />
+            </div>
+            <div className="flex flex-col col-span-12 overflow-hidden bg-white dark:bg-gradient-to-tl dark:from-slate-950 dark:to-slate-800 lg:col-span-9 rounded-2xl shadow-custom-light dark:shadow-custom-dark">
+              <AnimatePresence key={router.route}>
+                <Navbar />
+                <Component {...pageProps} />
+              </AnimatePresence>
+            </div>
+            <div className="md:hidden overflow-hidden col-span-12 p-4 text-center bg-white dark:bg-gradient-to-tr dark:from-slate-950 dark:to-slate-800 lg:col-span-3 rounded-2xl shadow-custom-light dark:shadow-custom-dark">
+              <PricingCarousel />
+            </div>
           </div>
-          <div className="flex flex-col col-span-12 overflow-hidden bg-white dark:bg-gradient-to-tl dark:from-slate-950 dark:to-slate-800 lg:col-span-9 rounded-2xl shadow-custom-light dark:shadow-custom-dark">
-            <AnimatePresence key={router.route}>
-              <Navbar />
-              <Component {...pageProps} />
-            </AnimatePresence>
-          </div>
-          <div className="md:hidden overflow-hidden col-span-12 p-4 text-center bg-white dark:bg-gradient-to-tr dark:from-slate-950 dark:to-slate-800 lg:col-span-3 rounded-2xl shadow-custom-light dark:shadow-custom-dark">
-            <PricingCarousel />
-          </div>
+          <PortfolioChatbot />
         </div>
-        <PortfolioChatbot />
-      </div>
+      )}
     </ThemeProvider>
   );
 }
 
 export default appWithTranslation(App);
+
+
+
+// import { DefaultSeo } from "next-seo";
+// import { useEffect, useState } from "react";
+
+// function MyApp({ Component, pageProps }: any) {
+//   const [seo, setSeo] = useState<any>(null);
+
+//   useEffect(() => {
+//     fetch("/api/settings").then(r => r.json()).then(j => setSeo(j.data?.seo));
+//   }, []);
+
+//   return (
+//     <>
+//       {seo && (
+//         <DefaultSeo
+//           title={seo.defaultTitle}
+//           defaultTitle={seo.defaultTitle}
+//           description={seo.defaultDescription}
+//           openGraph={{
+//             site_name: seo.siteName,
+//             images: seo.ogImage ? [{ url: seo.ogImage }] : [],
+//           }}
+//         />
+//       )}
+//       <Component {...pageProps} />
+//     </>
+//   );
+// }
+
+// export default MyApp;
